@@ -1,8 +1,15 @@
 import styled from "styled-components";
-
+import { device } from "../utils/device";
 const TypeSelector = styled.div`
   display: flex;
-  justify-content: flex-start;
+
+  @media ${device.mobile} {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media ${device.tablet} {
+    flex-direction: row;
+  }
 `;
 const AccountPageWrapper = styled.div`
   margin-left: 15vw;

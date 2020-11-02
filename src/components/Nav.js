@@ -6,83 +6,74 @@ import { HiMenu } from "react-icons/hi";
 import { device } from "../utils/device";
 import NavLinks from "../components/NavLinks";
 
+//logo, navItems
 const StyledNav = styled.nav`
-  display: flex;
   background-color: ${props => props.theme.colors.blue};
-  align-items: center;
-  max-height: 5rem;
-  padding: 1rem;
-
-  @media ${device.mobile} {
-    display: flex;
-    justify-content: space-between;
-
-    button {
-      border: none;
-      border-radius: 0.9rem;
-      max-height: 2.2rem;
-      line-height: 0.5;
-      background: #295da8;
-      color: ${props => props.theme.colors.white};
-      font-size: 1rem;
-      text-transform: uppercase;
-    }
-  }
-  @media ${device.tablet} {
-    padding-left: 15vw;
-    padding-right: 15vw;
-  }
-  p {
-    color: ${props => props.theme.colors.white};
-    text-transform: uppercase;
-    margin: 1rem;
-    font-weight: 100;
-    font-size: 1rem;
-  }
+  display: flex;
   button {
+    margin: 0 1rem 0.3rem 1rem;
     border: none;
     border-radius: 0.9rem;
-    padding: 1rem;
-    max-height: 2.5rem;
     width: 6rem;
-    line-height: 0.5;
+    height: 2rem;
     background: #295da8;
     color: ${props => props.theme.colors.white};
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-transform: uppercase;
   }
-`;
-
-const NavItems = styled.div`
   @media ${device.mobile} {
-    display: flex;
+    justify-content: space-between;
     align-items: flex-end;
-    height: 5rem;
-    width: auto;
     button {
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
-  }
-  @media ${device.laptop} {
-    align-items: center;
-    .hamburger {
       display: none;
     }
   }
+  @media ${device.tablet} {
+    justify-content: space-between;
+  }
+  @media ${device.laptop} {
+  }
 `;
 
+//links, search icon, login button, menu icon
+const NavItems = styled.div`
+  display: flex;
+  padding: 1rem;
+  @media ${device.tablet} {
+    align-items: flex-end;
+    padding: 1rem;
+  }
+  @media ${device.laptop} {
+    justify-content: flex-end;
+    align-items: center;
+  }
+`;
+
+const MenuIcon = styled.div`
+  @media (min-width: 1024px) {
+    display: none;
+  }
+`;
+const SearchIcon = styled.div`
+  margin: 0;
+  padding: 0;
+  @media ${device.mobile} {
+    display: none;
+  }
+`;
 export default function Nav() {
   return (
     <StyledNav>
       <Logo />
       <NavItems>
-        <NavLinks className='links' />
-        <IoMdSearch color='white' size={32} />
+        <NavLinks />
+        <SearchIcon>
+          <IoMdSearch color='white' size={32} />
+        </SearchIcon>
         <button>Login</button>
-        <div className='hamburger'>
+        <MenuIcon>
           <HiMenu color='white' size={32} />
-        </div>
+        </MenuIcon>
       </NavItems>
     </StyledNav>
   );

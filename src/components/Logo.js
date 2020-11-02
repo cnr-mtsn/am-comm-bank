@@ -3,15 +3,10 @@ import styled from "styled-components";
 import { device } from "../utils/device";
 
 const StyledImage = styled.img`
-  @media ${device.mobile} {
-    max-height: 105px;
-    max-width: 210px;
-  }
-  @media ${device.tablet} {
-    margin-right: 1rem;
-  }
-  @media ${device.laptop} {
-  }
+  width: 40vw;
+  padding: 1rem;
+  min-width: 8rem;
+  max-height: 6rem;
 `;
 export default function Logo() {
   return (

@@ -6,8 +6,23 @@ const Links = styled.div`
   @media ${device.mobile} {
     display: none;
   }
+  @media ${device.tablet} {
+    display: none;
+    p {
+      display: none;
+    }
+  }
   @media ${device.laptop} {
-    display: inherit;
+    display: flex;
+    justify-content: space-evenly;
+    p {
+      padding: 1.2rem;
+      color: ${props => props.theme.colors.white};
+      text-transform: uppercase;
+      font-weight: lighter;
+    }
+  }
+  @media ${device.desktop} {
   }
 `;
 export default function NavLinks() {

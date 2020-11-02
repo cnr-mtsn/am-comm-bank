@@ -10,21 +10,28 @@ import {
 export default function Personal(props) {
   const [type, setType] = useState(true);
 
-  const handleClick = () => {
-    setType(!type);
+  const handleCheckingClick = () => {
+    setType(true);
+  };
+  const handleSavingsClick = () => {
+    setType(false);
   };
   return (
     <AccountPageWrapper>
       <TypeSelector>
-        {type === true ? (
-          <AccountPageHeader onClick={handleClick}>
-            Personal Checking
-          </AccountPageHeader>
-        ) : (
-          <AccountPageHeader onClick={handleClick}>
-            Personal Savings
-          </AccountPageHeader>
-        )}
+        <AccountPageHeader
+          style={{ color: type ? "black" : "lightslategrey" }}
+          onClick={handleCheckingClick}
+        >
+          Personal Checking
+        </AccountPageHeader>
+
+        <AccountPageHeader
+          style={{ color: !type ? "black" : "lightslategrey" }}
+          onClick={handleSavingsClick}
+        >
+          Personal Savings
+        </AccountPageHeader>
       </TypeSelector>
       {type === true ? (
         <>
