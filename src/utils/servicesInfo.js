@@ -1,0 +1,222 @@
+const checking = {
+  personal: {
+    regular: {
+      header: "regular checking account",
+      description:
+        "For the customer who wants unlimited check writing privileges, we recommend the Regular Checking Account. This account offers these features",
+      info: [
+        "Opening deposit minimum is $100",
+        "Unlimited check writing privileges",
+        "Non-interest bearing account",
+        "Debit Card",
+        "Monthly maintenance fee of $5 if account balance falls below $500 on any day during that cycle OR if the average daily balance for the entire statement cycle is less than $1000",
+      ],
+    },
+    premium: {
+      header: "premium checking account",
+      descripiton:
+        "This interest bearing account offers unlimited check writing privileges and many other special features",
+      info: [
+        "Opening deposit just $100",
+        "Unlimited check writing privileges",
+        "Account earns interest*",
+        "Debit Card",
+        "Monthly fee of $7.50 if the account balance falls below $1,000 on any day during that cycle",
+      ],
+    },
+    gold: {
+      header: "america's community bank gold account",
+      description:
+        "An exclusive account for our customers over the age of 50 who maintain at least $5000 in America’s Community Bank accounts. You receive a Premium Checking Account and enjoy these special features",
+      info: [
+        "No monthly maintenance fees, regardless of account balance",
+        "Unlimited check writing privileges",
+        "Account earns interest*",
+        "Special checks provided at no charge",
+        "Debit Card",
+        "Special rates on CD’s, auto loans and Home Equity Loans",
+        "Special discounts on Safe Deposit Boxes, Travelers Checks, Money Orders, etc.",
+      ],
+    },
+    free: {
+      header: "free checking",
+      description:
+        "Things just keep getting better at America’s Community Bank. We’re locally owned and operated, offer friendly hometown service, and now we have a “FREE” checking account we’re sure will suit your needs. See what you think!",
+      info: [
+        "Opening deposit of just $25.00",
+        "Unlimited check writing privileges",
+        "Debit Card",
+        "No minimum balance requirement",
+        "No monthly maintenance fee",
+        "Non-interest bearing account",
+        "Check images are not returned with your monthly statement, however, under special circumstances you may obtain a copy of a check, subject to the bank’s normal fees",
+      ],
+    },
+  },
+  business: {
+    commercial: {
+      header: "commercial checking account",
+      description:
+        "America’s Community Bank Commercial Checking Account is designed specifically for your active business. This account offers you great value, with many special features",
+      info: [
+        "Opening deposit of just $100.00",
+        "Earnings allowance credit-charges will be reduced by the credit based on an earnings allowance of $.25 for each $100.00 in your account, credit is based on an average collected balance",
+        "Monthly maintenance fee just $10.00",
+        "Account fees are as follows:$.15 for each check or debit",
+        "$.10 for each deposited item",
+        "One lock deposit bag per account; additional bags $12.00",
+        "Two zipper deposit bags per account; additional bags $3.00",
+        "Non-interest bearing account",
+        "No ATM access",
+      ],
+    },
+    lowVolume: {
+      header: "LOW VOLUME CHECKING",
+      description:
+        "This America’s Community Bank account is designed for the business with limited check writing needs, yet this account continues to offer many features and benefits",
+      info: [
+        "Opening deposit of just $100.00",
+        "Monthly maintenance fee just $6.00",
+        "First 25 checks or debits are free, with a fee of $.20 for each additional check",
+        "$.10 for each deposited item",
+        "Non-interest bearing account",
+        "One lock deposit bag per account; additional bags $12.00",
+        "Two zipper deposit bags per account; additional bags $3.00",
+        "No ATM access",
+      ],
+    },
+    nonProfit: {
+      header: "NON-PROFIT CHECKING ACCOUNT",
+      description:
+        "An exclusive account for the Non-Profit Business or Association needing an inexpensive checking account. We’re sure you will find this account to be loaded with value!",
+      info: [
+        "Opening deposit of just $100.00",
+        "Monthly maintenance fee of $2.00 when account balance falls below $500.00",
+        "First 10 checks or debits are free, with a fee of $.20 for each additional check",
+        "Non-interest bearing account",
+        "No ATM access",
+      ],
+    },
+    commercialMoneyMarket: {
+      header: "COMMERCIAL MONEY MARKET",
+      description:
+        "Our Commercial Money Market account offers you interest on your balance and access to your money. This account offers a variety of other special features",
+      info: [
+        "Opening deposit of just $1000.00",
+        "Interest is based on the average daily balance and is paid at the end of each month*",
+        "Monthly fee of $10.00 if the account balance falls below $1000.00 any day during the cycle",
+        "Unlimited deposits",
+        "Limited transactions as follows:There can be no more than six (6) pre-authorized automatic or telephone transfers to a third person or to another account of the depositor per month",
+        "There will be an excessive withdrawal charge of $5 per item when more than six (6) items are processed during a statement cycle",
+      ],
+    },
+  },
+};
+
+const savings = {
+  personal: {
+    regular: {
+      header: "Statement Savings Account",
+      description:
+        "Our regular savings account offers a low initial deposit with several additional features",
+      info: [
+        "Opening deposit minimum is $100.00",
+        "Free Debit Card",
+        "Account earns interest*",
+        "Nine (9) withdrawals may be made each quarter with no charge. An excessive withdrawal charge of $2.00 per withdrawal will be assessed when withdrawals exceed limits",
+      ],
+    },
+
+    childrens: {
+      header: "Savings Club  for Children",
+      description:
+        "Starting to save early is a great habit for children. America’s Community Bank has designed a special savings account for children under the age of 18",
+      info: [
+        "Opening deposit minimum is $5",
+        "Account earns interest*",
+        "Nine (9) withdrawals may be made each quarter with no charge. An excessive withdrawal charge of $2.00 per withdrawal will be assessed when withdrawals exceed limits",
+      ],
+    },
+
+    moneyMarket: {
+      header: "money market investment account",
+      description:
+        "Earn a higher rate of interest, yet still have access to your money with our money market account",
+      info: [
+        "Opening deposit minimum is $1,000",
+        "Account earns interest*",
+        "Debit Card",
+        "There can be no more than six (6) pre-authorized automatic or telephone transfers to a third person or to another account of the depositor per month. There will be an excessive withdrawal charge of $5 per item when more than six (6) items are processed during a statement cycle",
+      ],
+    },
+
+    cd: {
+      header: "certificate of deposit (CD)",
+      description:
+        "America’s Community Bank offers certificates for the following terms: 3, 6, 12, 18, 24, 30, 48, 60 months. You enjoy these features and benefits with our CDs",
+      info: [
+        "Opening deposit minimum is $500",
+        "Interest rates set at the beginning of the term",
+        "Interest begins to accrue on the first day of deposit",
+        "Interest can be compounded into the CD, sent to you by check, or deposited into another America’s Community Bank account",
+        "Automatic renewal on the maturity date for an identical period of time, at the current interest rate for that term. You have a 10-day grace period, after the maturity date, to withdraw the funds or change the term without penalty",
+        "Early withdrawal penalties: 3-11 months - 3 months of accrued interest, earned or not. 12 months or more - 6 months of accrued interest, earned or not",
+      ],
+    },
+  },
+};
+
+const loans = {
+  description:
+    "At our Bank, we offer (but not limited to) the following types of loans taking into consideration safety and soundness of the Bank’s operation and quality of the particular loan",
+  info: [
+    "Residential mortgage loans for 1-4 family dwellings",
+    "Home improvement loans",
+    "Installment loans for personal and business needs",
+    "Automobile loans",
+    "Small business loans",
+    "Farm loans",
+    "Commercial loans",
+    "Business and commercial real estate loans",
+    "Construction loans",
+    "SBA guaranteed loans",
+  ],
+};
+
+const services = {
+  info: [
+    "24 hour ATM",
+    "Debit Cards",
+    "VISA® Platinum Preferred Credit Card",
+    "VISA® Classic Credit Card",
+    "Merchant Credit Card Services",
+    "Money Orders",
+    "Notary Service",
+    "Safe Deposit Boxes",
+    "Wire Transfers: Incoming/Outgoing",
+    "Zippered Deposit Bags",
+    "Locking Deposit Bags",
+    "Night Depository",
+    "ACH Origination (upon approval)",
+  ],
+};
+
+const about = {
+  header: "a brief history",
+  description:
+    "The bank was originally chartered as Bank of Urich in 1888 with its only office located in Urich, Missouri. This office, located in Henry County, was the bank’s only office for about 107 years. Our office was opened in Blue Springs, Jackson County, Missouri in 1997 and is now the home of our main office. In October, 2003 the name of the bank was changed to America’s Community Bank to more effectively promote the products and services offered and to serve the needs of our customers. \nAs a community bank, with local ownership, the focus is to develop relationships and meet the financial needs of the residents and businesses of the Bank's neighboring areas.",
+};
+
+const location = {
+  address: "1100 W Main, Blue Springs, MO 64015",
+  phone: "(816)-228-2300",
+  fax: "(816)-220-0005",
+};
+
+const contact = {
+  header: "Contact Us",
+  description:
+    "Private personal and account information such as Account Numbers, Passwords, PINs or Social Security Numbers should NOT be sent by e-mail.\nIf you have a question about your account or need an immediate response, please call us at 816-228-2300.",
+};
+
+export { checking, savings, loans, services, about, location, contact };
