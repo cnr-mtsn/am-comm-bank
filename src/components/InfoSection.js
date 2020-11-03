@@ -25,18 +25,16 @@ export default function InfoSection({ type }) {
   return (
     <StyledInfo>
       <div className='info-section'>
-        {type.header ? <h2>{type.header}</h2> : <> </>}
+        {type.header && <h2>{type.header}</h2>}
 
-        {type.description ? <p>{type.description}</p> : <> </>}
+        {type.description && <p>{type.description}</p>}
 
-        {type.info ? (
+        {type.info && (
           <ul>
             {type.info.map(value => (
               <li>{value}</li>
             ))}
           </ul>
-        ) : (
-          <></>
         )}
       </div>
     </StyledInfo>
