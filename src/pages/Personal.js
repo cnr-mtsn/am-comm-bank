@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import InfoSection from "../components/InfoSection";
 import SideCard from "../components/SideCard";
-import { checking, savings } from "../utils/servicesInfo";
+
+import { cards } from "../utils/data";
+import { checking, savings } from "../utils/data";
 import {
   AccountPageWrapper,
   AccountPageHeader,
   TypeSelector,
   Container,
+  CardSection,
 } from "../components/styles";
+
+import checks from "../media/checks.png";
+import online from "../media/online.png";
+import piggyBank from "../media/piggyBank.png";
+import locate from "../media/locate.png";
 
 export default function Personal(props) {
   const [type, setType] = useState(true);
@@ -18,6 +26,7 @@ export default function Personal(props) {
   const handleSavingsClick = () => {
     setType(false);
   };
+
   return (
     <AccountPageWrapper>
       <TypeSelector>
@@ -55,10 +64,10 @@ export default function Personal(props) {
             <InfoSection type={checking.personal.gold} />
             <InfoSection type={checking.personal.free} />
           </div>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <SideCard />
-            <SideCard />
-          </div>
+          <CardSection>
+            <SideCard image={online} card={cards.online} />
+            <SideCard image={piggyBank} card={cards.piggyBank} />
+          </CardSection>
         </Container>
       ) : (
         <Container>
@@ -68,10 +77,10 @@ export default function Personal(props) {
             <InfoSection type={savings.personal.moneyMarket} />
             <InfoSection type={savings.personal.cd} />
           </div>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <SideCard />
-            <SideCard />
-          </div>
+          <CardSection>
+            <SideCard image={locate} card={cards.locate} />
+            <SideCard image={checks} card={cards.checks} />
+          </CardSection>
         </Container>
       )}
     </AccountPageWrapper>

@@ -219,4 +219,44 @@ const contact = {
     "Private personal and account information such as Account Numbers, Passwords, PINs or Social Security Numbers should NOT be sent by e-mail.\nIf you have a question about your account or need an immediate response, please call us at 816-228-2300.",
 };
 
-export { checking, savings, loans, services, about, location, contact };
+const cards = {
+  online: {
+    image: "anytime",
+    header: `anytime access`,
+    description: `Fast, easy, and secure access to your accounts using Online Banking. Enjoy the convenience of banking anywhere, at anytime.`,
+    link: `explore online banking`,
+  },
+  piggyBank: {
+    image: "invest",
+    header: `invest in your future`,
+    description: `Explore our savings options to find the right account for your individual and family goals.`,
+    link: `compare personal savings`,
+  },
+  locate: {
+    image: "locate",
+    header: `locate our branch`,
+    description: `We’d love to see you. Stop by our branch and say hello.`,
+    link: `view location`,
+  },
+  checks: {
+    image: "checks",
+    header: `low on checks?`,
+    description: `Reorder your personal or business checks in minutes! Click the link below to get started.
+    `,
+    link: `order checks`,
+  },
+  contactUs: {
+    image: "contact",
+    header: `get in touch`,
+    description: `Have a question or concern? We’re here to help! Send us a message or give us a call today.`,
+    link: `contact us`,
+  },
+  loan: {
+    image: "lend",
+    header: `ready to lend a hand`,
+    description: `We offer a wide variety of loan options to make your dreams reality. Our experienced lenders are ready to help find your perfect fit.`,
+    link: `loan options`,
+  },
+};
+
+export { checking, savings, loans, services, about, location, contact, cards };

@@ -1,13 +1,29 @@
 import React from "react";
-import { AccountPageWrapper, AccountPageHeader } from "../components/styles";
+import {
+  AccountPageWrapper,
+  AccountPageHeader,
+  Container,
+  CardSection,
+} from "../components/styles";
 import InfoSection from "../components/InfoSection";
-import { services } from "../utils/servicesInfo";
 
+import SideCard from "../components/SideCard";
+import { cards, services } from "../utils/data";
+import lend from "../media/lend.png";
+import online from "../media/online.png";
 export default function Services() {
   return (
     <AccountPageWrapper>
       <AccountPageHeader>Additional Services</AccountPageHeader>
-      <InfoSection type={services} />
+      <Container>
+        <div>
+          <InfoSection type={services} />
+        </div>
+        <CardSection>
+          <SideCard image={lend} card={cards.loan} />
+          <SideCard image={online} card={cards.online} />
+        </CardSection>
+      </Container>
     </AccountPageWrapper>
   );
 }
