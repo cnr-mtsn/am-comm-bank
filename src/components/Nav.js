@@ -30,19 +30,21 @@ const StyledMenu = styled.nav`
     width: 40%;
   }
 
-  a {
-    font-size: 0.8rem;
+  p {
+    font-size: 1.2rem;
     text-transform: uppercase;
-    padding: 1rem 0 0 0;
+    letter-spacing: 0.2rem;
     font-weight: bold;
-    letter-spacing: 0.5rem;
     color: ${props => props.theme.colors.white};
-    text-decoration: none;
     transition: color 0.3s linear;
+    margin: 0;
+    padding: 1rem;
+    text-decoration: none;
 
     @media (max-width: 576px) {
-      font-size: 1.5rem;
-      text-align: center;
+      font-size: 0.8rem;
+      text-align: left;
+      letter-spacing: 0.2rem;
     }
 
     &:hover {
@@ -111,19 +113,19 @@ const Menu = ({ open, setOpen }) => {
       </MenuCloseButton>
 
       <Link to='/personal'>
-        <span>Personal</span>
+        <p>Personal</p>
       </Link>
       <Link to='/business'>
-        <span>Business</span>
+        <p>Business</p>
       </Link>
       <Link to='/loans'>
-        <span>Loans</span>
+        <p>Loans</p>
       </Link>
       <Link to='/services'>
-        <span>Services</span>
+        <p>Services</p>
       </Link>
       <Link to='/about'>
-        <span>About Us</span>
+        <p>About Us</p>
       </Link>
     </StyledMenu>
   );

@@ -86,6 +86,7 @@ const NavItems = styled.div`
 const MenuIcon = styled.div`
   @media ${device.laptop} {
     display: initial;
+    padding: 0 0.5rem 0 0;
   }
   @media (min-width: 1025px) {
     display: none;
