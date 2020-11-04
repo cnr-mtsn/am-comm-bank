@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 const StyledImage = styled.img`
   width: 15rem;
-  outline: 1px solid white;
+
   padding: 1rem;
 
   height: 5rem;
