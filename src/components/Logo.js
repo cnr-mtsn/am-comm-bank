@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 const StyledImage = styled.img`
-  width: 35vw;
-
+  width: 15rem;
+  outline: 1px solid white;
   padding: 1rem;
 
-  max-height: 5rem;
+  height: 5rem;
 `;
 export default function Logo() {
   return (

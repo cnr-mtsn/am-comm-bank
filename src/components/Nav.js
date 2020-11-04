@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../components/Logo";
 import { IoMdSearch } from "react-icons/io";
 import styled from "styled-components";
@@ -16,10 +17,10 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   align-items: flex-start;
   background: ${props => props.theme.colors.blue};
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-200%)")};
   height: 100vh;
   text-align: left;
-  padding: 2rem;
+  padding: 1rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -58,8 +59,8 @@ const StyledBurger = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
   z-index: 10;
+  margin-bottom: 0.3rem;
 
   &:focus {
     outline: none;
@@ -109,11 +110,21 @@ const Menu = ({ open, setOpen }) => {
         <AiOutlineClose size={24} />
       </MenuCloseButton>
 
-      <a href='/personal'>Personal</a>
-      <a href='/business'>Business</a>
-      <a href='/loans'>Loans</a>
-      <a href='/services'>Services</a>
-      <a href='/about'>About Us</a>
+      <Link to='/personal'>
+        <span>Personal</span>
+      </Link>
+      <Link to='/business'>
+        <span>Business</span>
+      </Link>
+      <Link to='/loans'>
+        <span>Loans</span>
+      </Link>
+      <Link to='/services'>
+        <span>Services</span>
+      </Link>
+      <Link to='/about'>
+        <span>About Us</span>
+      </Link>
     </StyledMenu>
   );
 };
@@ -141,7 +152,7 @@ export default function Nav() {
           <IoMdSearch color='white' size={32} />
         </SearchIcon>
 
-        <StyledButton>Login</StyledButton>
+        <StyledButton className='loginButton'>Login</StyledButton>
 
         <MenuIcon>
           <Burger open={open} setOpen={setOpen} />

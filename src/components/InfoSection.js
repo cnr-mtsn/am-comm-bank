@@ -7,7 +7,7 @@ const StyledInfo = styled.div`
     text-transform: uppercase;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    font-weight: 400;
+    font-weight: 700;
   }
   p {
     margin: 0;

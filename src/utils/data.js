@@ -14,7 +14,7 @@ const checking = {
     },
     premium: {
       header: "premium checking account",
-      descripiton:
+      description:
         "This interest bearing account offers unlimited check writing privileges and many other special features",
       info: [
         "Opening deposit just $100",

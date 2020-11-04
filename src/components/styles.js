@@ -37,18 +37,13 @@ const Container = styled.div`
 //logo, navItems
 const StyledNav = styled.nav`
   background-color: ${props => props.theme.colors.blue};
+  background-size: cover;
+  width: 100vw;
   display: flex;
   height: 6.5rem;
 
   @media ${device.mobile} {
-    justify-content: space-between;
     align-items: flex-end;
-    button {
-      display: none;
-    }
-  }
-  @media ${device.tablet} {
-    justify-content: space-between;
   }
   @media ${device.desktop} {
     justify-content: space-between;
@@ -56,10 +51,10 @@ const StyledNav = styled.nav`
 `;
 
 const StyledButton = styled.button`
-  margin: 0 2rem 0.3rem 1rem;
   border: none;
   border-radius: 0.9rem;
-  width: 6rem;
+  width: 5rem;
+  margin: 0.5rem;
   height: 2rem;
   background: #295da8;
   color: ${props => props.theme.colors.white};
@@ -70,7 +65,6 @@ const StyledButton = styled.button`
 //links, search icon, login button, menu icon
 const NavItems = styled.div`
   display: flex;
-  padding: 1rem;
   @media ${device.tablet} {
     align-items: flex-end;
     padding: 1rem;
@@ -79,10 +73,21 @@ const NavItems = styled.div`
     justify-content: flex-end;
     align-items: center;
   }
+  .loginButton {
+    @media ${device.mobile} {
+      display: none;
+    }
+    @media (min-width: 481px) {
+      display: initial;
+    }
+  }
 `;
 
 const MenuIcon = styled.div`
-  @media (min-width: 1024px) {
+  @media ${device.laptop} {
+    display: initial;
+  }
+  @media (min-width: 1025px) {
     display: none;
   }
 `;
@@ -101,8 +106,8 @@ const StyledCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem 0 2rem 0;
     padding: 1rem;
+    margin: 1rem;
     img {
       height: 8rem;
       padding: 1rem;
