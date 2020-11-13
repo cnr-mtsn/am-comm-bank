@@ -3,10 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 const StyledImage = styled.img`
   width: 15rem;
-
-  padding: 1rem;
-
-  height: 5rem;
+  height: auto;
+  padding: 1rem 0 1rem 0.5rem;
 `;
 export default function Logo() {
   return (

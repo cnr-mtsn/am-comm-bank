@@ -15,6 +15,8 @@ const theme = {
   colors: {
     white: "#ffffff",
     blue: "#020864",
+    darkGrey: "#6e6d6d",
+    lightBlue: "#295da8",
   },
   imageUrl: {
     logo:

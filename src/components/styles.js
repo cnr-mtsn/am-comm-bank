@@ -40,7 +40,7 @@ const StyledNav = styled.nav`
   background-size: cover;
   width: 100vw;
   display: flex;
-  height: 6.5rem;
+  height: 7.55rem;
 
   @media ${device.mobile} {
     align-items: flex-end;
@@ -56,7 +56,7 @@ const StyledButton = styled.button`
   width: 5rem;
   margin: 0.5rem;
   height: 2rem;
-  background: #295da8;
+  background: ${props => props.theme.colors.lightBlue};
   color: ${props => props.theme.colors.white};
   font-size: 1rem;
   text-transform: uppercase;
@@ -66,7 +66,7 @@ const StyledButton = styled.button`
 const NavItems = styled.div`
   display: flex;
   @media ${device.tablet} {
-    align-items: flex-end;
+    align-items: center;
     padding: 1rem;
   }
   @media ${device.laptop} {

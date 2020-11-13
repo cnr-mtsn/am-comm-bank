@@ -259,4 +259,37 @@ const cards = {
   },
 };
 
-export { checking, savings, loans, services, about, location, contact, cards };
+const home = {
+  welcome: {
+    title: "welcome",
+    description:
+      "<p>Our new site looks great on desktop, tablet and mobile devices! Take a look around and let us know if you have any questions.</p>",
+    button: "contact us",
+    route: "/contact",
+  },
+  loans: {
+    title: "loans",
+    description:
+      "<p>We can help you find a loan that is best for you and your budget.</p>",
+    button: "explore loans",
+    route: "/loans",
+  },
+  personal: {
+    title: "personal checking",
+    description:
+      "<p>Checking made simple! Account options tailored to your financial needs.</p>",
+    button: "compare accounts",
+    route: "/personal",
+  },
+};
+export {
+  home,
+  checking,
+  savings,
+  loans,
+  services,
+  about,
+  location,
+  contact,
+  cards,
+};

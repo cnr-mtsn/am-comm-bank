@@ -5,11 +5,14 @@ import { IoMdSearch } from "react-icons/io";
 import styled from "styled-components";
 import NavLinks from "../components/NavLinks";
 import { device } from "../utils/device";
-import { StyledNav } from "../components/styles";
-import { StyledButton } from "../components/styles";
-import { NavItems } from "../components/styles";
-import { MenuIcon } from "../components/styles";
-import { SearchIcon } from "../components/styles";
+import {
+  StyledNav,
+  StyledButton,
+  NavItems,
+  MenuIcon,
+  SearchIcon,
+} from "../components/styles";
+
 import { AiOutlineClose } from "react-icons/ai";
 
 const StyledMenu = styled.nav`
