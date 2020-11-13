@@ -1,8 +1,10 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+
 const Container = styled.div`
   margin-bottom: 0.3rem;
+
   /* Style the accordion section */
   .accordionSsection {
     display: flex;
@@ -14,7 +16,7 @@ const Container = styled.div`
     background-color: ${props => props.theme.colors.darkGrey};
     color: white;
     cursor: pointer;
-    padding: 18px;
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +26,7 @@ const Container = styled.div`
     width: 100vw;
     border: none;
     outline: none;
-    height: 2.5rem;
+    height: auto;
   }
 
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -64,8 +66,9 @@ const Container = styled.div`
     align-items: center;
     color: grey;
     text-align: center;
-    padding: 1.5rem 2rem 1rem 2rem;
+    padding: 0.5rem 1.5rem 0 1.5rem;
     line-height: 15pt;
+    margin: 2rem 0 0.5rem 0;
   }
 `;
 
@@ -76,7 +79,7 @@ const StyledButton = styled.button`
   color: ${props => props.theme.colors.white};
   text-transform: uppercase;
   padding: 11px 32px;
-  margin-bottom: 0.5rem;
+  margin: 2rem 0 1rem 0;
 `;
 
 export default function Accordion(props) {

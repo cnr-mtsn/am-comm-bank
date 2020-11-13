@@ -132,6 +132,37 @@ const StyledCard = styled.div`
     }
   }
 `;
+const StyledSliderCard = styled.div`
+  @media ${device.mobile} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
+    img {
+      height: auto;
+      width: 5rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      font-weight: 100;
+      letter-spacing: 0.7px;
+      line-height: 16pt;
+    }
+    a {
+      margin: 2rem;
+      text-transform: capitalize;
+      font-size: 16px;
+      font-weight: bolder;
+    }
+  }
+`;
 
 const CardSection = styled.div`
   display: flex;
@@ -149,6 +180,7 @@ export {
   MenuIcon,
   SearchIcon,
   StyledCard,
+  StyledSliderCard,
   StyledButton,
   CardSection,
 };

@@ -6,6 +6,9 @@ import welcome from "../media/hero-welcome.jpg";
 import loans from "../media/hero-loans.jpg";
 import personal from "../media/hero-personal.jpg";
 import Accordion from "../components/Accordion";
+
+import CardSlider from "../components/CardSlider";
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,6 +25,7 @@ export default function Home() {
   const toggle1 = () => setImage(welcome);
   const toggle2 = () => setImage(loans);
   const toggle3 = () => setImage(personal);
+
   return (
     <Container>
       <StyledImage src={image} />
@@ -49,6 +53,8 @@ export default function Home() {
           route={home.personal.route}
         />
       </div>
+
+      <CardSlider />
     </Container>
   );
 }

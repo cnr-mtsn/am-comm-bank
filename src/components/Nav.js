@@ -143,8 +143,8 @@ const Burger = ({ open, setOpen }) => {
   );
 };
 
-export default function Nav() {
-  const [open, setOpen] = useState(false);
+export default function Nav({ navOpen }) {
+  const [open, setOpen] = useState(navOpen);
 
   return (
     <StyledNav>

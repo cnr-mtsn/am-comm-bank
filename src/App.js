@@ -10,6 +10,7 @@ import Loans from "./pages/Loans";
 import Services from "./pages/Services";
 
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 const theme = {
   colors: {
@@ -17,6 +18,7 @@ const theme = {
     blue: "#020864",
     darkGrey: "#6e6d6d",
     lightBlue: "#295da8",
+    offWhite: "#eff1f3",
   },
   imageUrl: {
     logo:
@@ -35,7 +37,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Router>
-        <Nav />
+        <Nav navOpen={false} />
         <Switch>
           <Route path='/personal'>
             <Personal />
@@ -56,6 +58,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </ThemeProvider>
   );
