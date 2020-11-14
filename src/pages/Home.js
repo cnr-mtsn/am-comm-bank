@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-
+import { device } from "../utils/device";
 import { home } from "../utils/data";
 import welcome from "../media/hero-welcome.jpg";
 import loans from "../media/hero-loans.jpg";
 import personal from "../media/hero-personal.jpg";
 import Accordion from "../components/Accordion";
+import HomeCards from "../components/HomeCards";
 
 import CardSlider from "../components/CardSlider";
 
@@ -13,6 +14,16 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
+  .cardSlider {
+    @media (min-width: 481px) {
+      display: none;
+    }
+  }
+  .homeCards {
+    @media ${device.mobile} {
+      display: none;
+    }
+  }
 `;
 const StyledImage = styled.img`
   height: auto;
@@ -29,6 +40,7 @@ export default function Home() {
   return (
     <Container>
       <StyledImage src={image} />
+
       <div onClick={toggle1}>
         <Accordion
           title={home.welcome.title}
@@ -54,7 +66,12 @@ export default function Home() {
         />
       </div>
 
-      <CardSlider />
+      <div className='cardSlider'>
+        <CardSlider />
+      </div>
+      <div className='homeCards'>
+        <HomeCards />
+      </div>
     </Container>
   );
 }

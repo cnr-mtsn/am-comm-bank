@@ -6,7 +6,7 @@ const Container = styled.div`
   margin-bottom: 0.3rem;
 
   /* Style the accordion section */
-  .accordionSsection {
+  .accordionSection {
     display: flex;
     flex-direction: column;
   }
@@ -39,11 +39,6 @@ const Container = styled.div`
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     letter-spacing: 0.5px;
-  }
-
-  /* Style to rotate icon when state is active */
-  .rotate {
-    transform: rotate(90deg);
   }
 
   /* Style the accordion content panel. Note: hidden by default */

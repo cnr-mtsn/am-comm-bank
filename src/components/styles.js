@@ -163,6 +163,34 @@ const StyledSliderCard = styled.div`
     }
   }
 `;
+const StyledHomeCard = styled.div`
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    height: 6rem;
+    margin: 0 0 1rem 0;
+  }
+  h3 {
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    margin: 0.5rem 0 1rem 0;
+  }
+  p {
+    text-align: center;
+    color: grey;
+    line-height: 16pt;
+  }
+  a {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 1rem;
+  }
+`;
 
 const CardSection = styled.div`
   display: flex;
@@ -181,6 +209,7 @@ export {
   SearchIcon,
   StyledCard,
   StyledSliderCard,
+  StyledHomeCard,
   StyledButton,
   CardSection,
 };
