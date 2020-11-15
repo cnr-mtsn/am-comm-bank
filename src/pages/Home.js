@@ -25,6 +25,18 @@ const Container = styled.div`
     }
   }
 `;
+const AccordionWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  height: 0;
+  align-items: flex-end;
+  @media ${device.tablet} {
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+  }
+`;
 const StyledImage = styled.img`
   height: auto;
   width: 100vw;
@@ -40,31 +52,32 @@ export default function Home() {
   return (
     <Container>
       <StyledImage src={image} />
-
-      <div onClick={toggle1}>
-        <Accordion
-          title={home.welcome.title}
-          content={home.welcome.description}
-          button={home.welcome.button}
-          route={home.welcome.route}
-        />
-      </div>
-      <div onClick={toggle2}>
-        <Accordion
-          title={home.loans.title}
-          content={home.loans.description}
-          button={home.loans.button}
-          route={home.loans.route}
-        />
-      </div>
-      <div onClick={toggle3}>
-        <Accordion
-          title={home.personal.title}
-          content={home.personal.description}
-          button={home.personal.button}
-          route={home.personal.route}
-        />
-      </div>
+      <AccordionWrapper>
+        <div onClick={toggle1}>
+          <Accordion
+            title={home.welcome.title}
+            content={home.welcome.description}
+            button={home.welcome.button}
+            route={home.welcome.route}
+          />
+        </div>
+        <div onClick={toggle2}>
+          <Accordion
+            title={home.loans.title}
+            content={home.loans.description}
+            button={home.loans.button}
+            route={home.loans.route}
+          />
+        </div>
+        <div onClick={toggle3}>
+          <Accordion
+            title={home.personal.title}
+            content={home.personal.description}
+            button={home.personal.button}
+            route={home.personal.route}
+          />
+        </div>
+      </AccordionWrapper>
 
       <div className='cardSlider'>
         <CardSlider />
