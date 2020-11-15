@@ -12,6 +12,8 @@ const Container = styled.footer`
   flex-direction: column;
   justify-content: space-around;
   gap: 1rem;
+  width: 100vw;
+  margin-top: 5rem;
 `;
 const Links = styled.div`
   display: flex;
@@ -69,9 +71,9 @@ export default function Footer() {
   return (
     <Container>
       <Links>
-        <Link to='/siteMap'>Privacy Policy</Link>
+        <Link to='/privacyPolicy'>Privacy Policy</Link>
         <p className='divider'> | </p>
-        <Link to='/privacyPolicy'>Site Map</Link>
+        <Link to='/siteMap'>Site Map</Link>
         <p className='divider'> | </p>
         <Link to='/reportOfCondition'>Report Of Condition</Link>
       </Links>

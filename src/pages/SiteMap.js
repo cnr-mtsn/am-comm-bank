@@ -1,5 +1,5 @@
 import React from "react";
-
+import { AccountPageWrapper } from "../components/styles";
 export default function SiteMap() {
-  return <div>site map</div>;
+  return <AccountPageWrapper>site map</AccountPageWrapper>;
 }

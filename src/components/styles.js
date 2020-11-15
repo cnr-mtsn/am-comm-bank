@@ -17,13 +17,7 @@ const TypeSelector = styled.div`
 const AccountPageWrapper = styled.div`
   margin: 3rem 10vw 0 10vw;
 `;
-const AccountPageHeader = styled.h1`
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-top: 2rem;
-  cursor: pointer;
-`;
+
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
@@ -127,9 +121,12 @@ const StyledCard = styled.div`
     a {
       padding: 1rem;
       text-transform: capitalize;
-      text-decoration: none;
+      text-decoration: underline;
       text-align: center;
     }
+  }
+  @media ${device.tablet} {
+    width: 90vw;
   }
 `;
 const StyledSliderCard = styled.div`
@@ -200,7 +197,6 @@ const CardSection = styled.div`
 
 export {
   TypeSelector,
-  AccountPageHeader,
   AccountPageWrapper,
   Container,
   StyledNav,

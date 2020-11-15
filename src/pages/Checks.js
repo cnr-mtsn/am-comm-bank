@@ -1,8 +1,4 @@
 import React from "react";
-import { about, cards } from "../utils/data";
-import SideCard from "../components/SideCard";
-import online from "../media/online.png";
-import locate from "../media/locate.png";
 import {
   AccountPageWrapper,
   Container,
@@ -10,16 +6,20 @@ import {
 } from "../components/styles";
 import InfoSection from "../components/InfoSection";
 
-export default function About() {
+import SideCard from "../components/SideCard";
+import { checks, cards } from "../utils/data";
+import online from "../media/online.png";
+import piggyBank from "../media/piggyBank.png";
+export default function Checks() {
   return (
     <AccountPageWrapper>
       <Container>
         <div>
-          <InfoSection type={about} />
+          <InfoSection type={checks} />
         </div>
         <CardSection>
           <SideCard image={online} card={cards.online} />
-          <SideCard image={locate} card={cards.locate} />
+          <SideCard image={piggyBank} card={cards.piggyBank} />
         </CardSection>
       </Container>
     </AccountPageWrapper>

@@ -52,6 +52,7 @@ const checking = {
         "Check images are not returned with your monthly statement, however, under special circumstances you may obtain a copy of a check, subject to the bank’s normal fees",
       ],
     },
+    message: "*Call us for current rates",
   },
   business: {
     commercial: {
@@ -110,6 +111,8 @@ const checking = {
         "There will be an excessive withdrawal charge of $5 per item when more than six (6) items are processed during a statement cycle",
       ],
     },
+    message:
+      "*Interest is calculated by applying the annual interest rate on per annum basis to the daily collected balance. The annual interest rate is a variable rate and can change at any time. The rate applicable to this account depends upon the balance in the account each day.",
   },
 };
 
@@ -167,6 +170,7 @@ const savings = {
 };
 
 const loans = {
+  header: "Loan Products",
   description:
     "At our Bank, we offer (but not limited to) the following types of loans taking into consideration safety and soundness of the Bank’s operation and quality of the particular loan",
   info: [
@@ -181,9 +185,12 @@ const loans = {
     "Construction loans",
     "SBA guaranteed loans",
   ],
+  message:
+    "One of our loan officers would be happy to help you with your loan needs. We invite you to call with questions or to set up an appointment at 816-228-2300.",
 };
 
 const services = {
+  header: "additional services",
   info: [
     "24 hour ATM",
     "Debit Cards",
@@ -199,8 +206,42 @@ const services = {
     "Night Depository",
     "ACH Origination (upon approval)",
   ],
+  contactMessage: {
+    url: "/contact",
+    linkText: "Please contact us",
+    text: " to find out more about these services.",
+  },
+
+  debitCardMessage:
+    "If your DEBIT CARD has been lost or stolen after normal banking hours, please contact our Hot Card Center at 866-546-8273. In addition, please Notify the bank as soon as possible during regular business hours.",
 };
 
+const onlineBanking = {
+  header: "online banking",
+  description:
+    "America’s Community Bank is always looking for new ways to make banking convenient for our customers. One of those ways is NetBanking, which is our online banking product. NetBanking is a simple and safe way for you to have direct access to your accounts, 24 hours a day, 7 days a week.",
+  info: [
+    "Access Your Account",
+    "Review Account Activity",
+    "Check on cleared checks, ATM/Debit Card transactions, deposits.",
+    "Transfer money between your accounts with America’s Community Bank",
+  ],
+  contactMessage:
+    "Please contact us at (816) 228-2300 for more information on how to enroll.",
+  bankingAgreementLink: "Click here to access our Online Banking Agreement",
+  creditCardOffer:
+    "Apply today for a VISA® Platinum Preferred or VISA® Classic credit card. NetBanking customers can login, download and complete an application. Or you can pick up an application today or call us at 816-228-2300 and we will mail one to you.",
+};
+
+const checks = {
+  header: "Order Checks",
+  description:
+    "Feel free to contact us and we will be happy to assist you with your check order at no extra charge. Or you may place your order directly with",
+  link: {
+    url: "https://orderpoint.deluxe.com/personal-checks/welcome.htm",
+    text: "Deluxe Check Printers",
+  },
+};
 const about = {
   header: "a brief history",
   description:
@@ -208,9 +249,23 @@ const about = {
 };
 
 const location = {
+  header: "Locations / Hours",
   address: "1100 W Main, Blue Springs, MO 64015",
   phone: "(816)-228-2300",
   fax: "(816)-220-0005",
+
+  hours: {
+    lobby: {
+      weekday: "9:00AM - 5:00PM",
+      saturday: "9:00AM - 12:00PM",
+    },
+    driveUp: {
+      weekday: "8:00AM - 5:00PM",
+      saturday: "9:00AM - 12:00PM",
+    },
+    atm: "24-hour atm access",
+    holidayMessage: "Holidays may affect the hours posted.",
+  },
 };
 
 const contact = {
@@ -224,38 +279,56 @@ const cards = {
     image: "anytime",
     header: `anytime access`,
     description: `Fast, easy, and secure access to your accounts using Online Banking. Enjoy the convenience of banking anywhere, at anytime.`,
-    link: `explore online banking`,
+    link: {
+      url: "/onlineBanking",
+      text: "explore online banking",
+    },
   },
   piggyBank: {
     image: "invest",
     header: `invest in your future`,
     description: `Explore our savings options to find the right account for your individual and family goals.`,
-    link: `compare personal savings`,
+    link: {
+      url: "/personal",
+      text: "compare personal savings",
+    },
   },
   locate: {
     image: "locate",
     header: `locate our branch`,
     description: `We’d love to see you. Stop by our branch and say hello.`,
-    link: `view location`,
+    link: {
+      url: "/location",
+      text: "view location",
+    },
   },
   checks: {
     image: "checks",
     header: `low on checks?`,
     description: `Reorder your personal or business checks in minutes! Click the link below to get started.
     `,
-    link: `order checks`,
+    link: {
+      url: "/checks",
+      text: `order checks`,
+    },
   },
   contactUs: {
     image: "contact",
     header: `get in touch`,
     description: `Have a question or concern? We’re here to help! Send us a message or give us a call today.`,
-    link: `contact us`,
+    link: {
+      url: "/contact",
+      text: `contact us`,
+    },
   },
   loan: {
     image: "lend",
     header: `ready to lend a hand`,
     description: `We offer a wide variety of loan options to make your dreams reality. Our experienced lenders are ready to help find your perfect fit.`,
-    link: `loan options`,
+    link: {
+      url: "/loans",
+      text: "loan options",
+    },
   },
 };
 
@@ -282,6 +355,7 @@ const home = {
     route: "/personal",
   },
 };
+
 export {
   home,
   checking,
@@ -292,4 +366,6 @@ export {
   location,
   contact,
   cards,
+  checks,
+  onlineBanking,
 };

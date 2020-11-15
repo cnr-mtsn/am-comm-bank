@@ -1,21 +1,28 @@
 import React from "react";
 import InfoSection from "../components/InfoSection";
-
+import styled from "styled-components";
 import SideCard from "../components/SideCard";
 import { cards, checking } from "../utils/data";
 import online from "../media/online.png";
 import contact from "../media/contact.png";
 import {
   AccountPageWrapper,
-  AccountPageHeader,
   Container,
   CardSection,
 } from "../components/styles";
 
+const BusinessHeader = styled.h1`
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  cursor: pointer;
+`;
+
 export default function Business(props) {
   return (
     <AccountPageWrapper>
-      <AccountPageHeader>Business Checking</AccountPageHeader>
+      <BusinessHeader>Business Checking</BusinessHeader>
       <Container>
         <div>
           <InfoSection type={checking.business.commercial} />

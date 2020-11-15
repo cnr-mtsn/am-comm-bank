@@ -5,7 +5,6 @@ import SideCard from "../components/SideCard";
 import { cards, loans } from "../utils/data";
 import {
   AccountPageWrapper,
-  AccountPageHeader,
   Container,
   CardSection,
 } from "../components/styles";
@@ -14,7 +13,6 @@ import online from "../media/online.png";
 export default function Loans(props) {
   return (
     <AccountPageWrapper>
-      <AccountPageHeader>loan products</AccountPageHeader>
       <Container>
         <div>
           <InfoSection type={loans} />

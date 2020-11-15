@@ -1,5 +1,6 @@
 import React from "react";
+import { AccountPageWrapper } from "../components/styles";
 
 export default function ReportOfCondition() {
-  return <div>report of condition</div>;
+  return <AccountPageWrapper>report of condition</AccountPageWrapper>;
 }

@@ -27,7 +27,12 @@ export default function InfoSection({ type }) {
       <div className='info-section'>
         {type.header && <h2>{type.header}</h2>}
 
-        {type.description && <p>{type.description}</p>}
+        {type.description && (
+          <p>
+            {type.description}{" "}
+            {type.link && <a href={type.link.url}>{type.link.text}</a>}
+          </p>
+        )}
 
         {type.info && (
           <ul>

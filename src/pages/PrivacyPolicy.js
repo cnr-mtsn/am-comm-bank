@@ -1,5 +1,6 @@
 import React from "react";
+import { AccountPageWrapper } from "../components/styles";
 
 export default function PrivacyPolicy() {
-  return <div>privacy policy</div>;
+  return <AccountPageWrapper>privacy policy</AccountPageWrapper>;
 }

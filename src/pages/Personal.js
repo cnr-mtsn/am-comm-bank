@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import InfoSection from "../components/InfoSection";
 import SideCard from "../components/SideCard";
 
@@ -6,7 +7,6 @@ import { cards } from "../utils/data";
 import { checking, savings } from "../utils/data";
 import {
   AccountPageWrapper,
-  AccountPageHeader,
   TypeSelector,
   Container,
   CardSection,
@@ -16,6 +16,14 @@ import checks from "../media/checks.png";
 import online from "../media/online.png";
 import piggyBank from "../media/piggyBank.png";
 import locate from "../media/locate.png";
+
+const PersonalHeader = styled.h1`
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  cursor: pointer;
+`;
 
 export default function Personal(props) {
   const [type, setType] = useState(true);
@@ -30,7 +38,7 @@ export default function Personal(props) {
   return (
     <AccountPageWrapper>
       <TypeSelector>
-        <AccountPageHeader
+        <PersonalHeader
           style={{
             color: type ? "black" : "lightslategrey",
             fontSize: type ? "1.3rem" : "1rem",
@@ -41,9 +49,9 @@ export default function Personal(props) {
           onClick={handleCheckingClick}
         >
           Personal Checking
-        </AccountPageHeader>
+        </PersonalHeader>
 
-        <AccountPageHeader
+        <PersonalHeader
           style={{
             color: !type ? "black" : "lightslategrey",
             fontSize: !type ? "1.3rem" : "1rem",
@@ -54,7 +62,7 @@ export default function Personal(props) {
           onClick={handleSavingsClick}
         >
           Personal Savings
-        </AccountPageHeader>
+        </PersonalHeader>
       </TypeSelector>
       {type === true ? (
         <Container>
