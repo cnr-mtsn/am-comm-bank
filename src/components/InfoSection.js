@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-
-const StyledInfo = styled.div`
+import { motion } from "framer-motion";
+const StyledInfo = styled(motion.div)`
+  padding: 0 1rem 0 2rem;
+  max-width: 80vw;
   h2 {
     color: ${props => props.theme.colors.blue};
     text-transform: uppercase;
@@ -20,6 +22,25 @@ const StyledInfo = styled.div`
     margin-top: 2.5rem;
   }
 `;
+const listVariants = {
+  in: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+  out: {
+    opacity: 0,
+  },
+};
+const itemVariants = {
+  in: {
+    opacity: 1,
+  },
+  out: {
+    opacity: 0,
+  },
+};
 
 export default function InfoSection({ type }) {
   return (
@@ -28,18 +49,18 @@ export default function InfoSection({ type }) {
         {type.header && <h2>{type.header}</h2>}
 
         {type.description && (
-          <p>
+          <dddp>
             {type.description}{" "}
             {type.link && <a href={type.link.url}>{type.link.text}</a>}
-          </p>
+          </dddp>
         )}
 
         {type.info && (
-          <ul>
+          <motion.ul variants={listVariants} initial='out' animate='in'>
             {type.info.map(value => (
-              <li>{value}</li>
+              <motion.li variants={itemVariants}>{value}</motion.li>
             ))}
-          </ul>
+          </motion.ul>
         )}
       </div>
     </StyledInfo>

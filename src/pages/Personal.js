@@ -66,7 +66,7 @@ export default function Personal(props) {
       </TypeSelector>
       {type === true ? (
         <Container>
-          <div>
+          <div style={{ width: "60vw" }}>
             <InfoSection type={checking.personal.regular} />
             <InfoSection type={checking.personal.premium} />
             <InfoSection type={checking.personal.gold} />

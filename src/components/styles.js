@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { device } from "../utils/device";
+import { motion } from "framer-motion";
+import { pageTransition, pageVariants } from "../utils/motion";
+import Footer from "../components/Footer";
 const TypeSelector = styled.div`
   display: flex;
 
@@ -14,13 +17,29 @@ const TypeSelector = styled.div`
     justify-content: center;
   }
 `;
-const AccountPageWrapper = styled.div`
-  margin: 3rem 10vw 0 10vw;
+const StyledAccountPageWrapper = styled(motion.div)`
+  min-height: 100vh;
+  position: absolute;
+  padding: 2rem 2rem 0rem 2rem;
 `;
+const AccountPageWrapper = ({ children }) => (
+  <StyledAccountPageWrapper
+    initial='initial'
+    animate='in'
+    exit='out'
+    variants={pageVariants}
+    transition={pageTransition}
+  >
+    {children}
+    <Footer />
+  </StyledAccountPageWrapper>
+);
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-between;
+  max-width: 90vw;
+  padding: 1rem;
+
   @media ${device.tablet} {
     flex-direction: column;
   }
@@ -32,7 +51,7 @@ const Container = styled.div`
 const StyledNav = styled.nav`
   background-color: ${props => props.theme.colors.blue};
   background-size: cover;
-  width: 100vw;
+
   display: flex;
   height: 7.55rem;
 
@@ -93,16 +112,15 @@ const SearchIcon = styled.div`
     display: none;
   }
 `;
-const StyledCard = styled.div`
+const StyledCard = styled(motion.div)`
   @media ${device.desktop} {
-    height: auto;
-    width: 15rem;
+    width: 25vw;
     border: 4px solid lightgrey;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    margin: 1rem;
+    margin: 1rem 0;
     img {
       height: 8rem;
       padding: 1rem;
@@ -129,7 +147,7 @@ const StyledCard = styled.div`
     width: 90vw;
   }
 `;
-const StyledSliderCard = styled.div`
+const StyledSliderCard = styled(motion.div)`
   @media ${device.mobile} {
     display: flex;
     flex-direction: column;
@@ -160,7 +178,7 @@ const StyledSliderCard = styled.div`
     }
   }
 `;
-const StyledHomeCard = styled.div`
+const StyledHomeCard = styled(motion.div)`
   padding: 1rem;
   display: flex;
   flex-direction: column;

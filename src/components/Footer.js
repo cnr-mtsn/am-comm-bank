@@ -13,7 +13,7 @@ const Container = styled.footer`
   justify-content: space-around;
   gap: 1rem;
   width: 100vw;
-  margin-top: 5rem;
+  margin: 0 -2rem 0 -2rem;
 `;
 const Links = styled.div`
   display: flex;

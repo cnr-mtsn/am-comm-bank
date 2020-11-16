@@ -15,8 +15,9 @@ const BusinessHeader = styled.h1`
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: 600;
-  margin-top: 2rem;
   cursor: pointer;
+  padding: 1rem;
+  margin: 0;
 `;
 
 export default function Business(props) {

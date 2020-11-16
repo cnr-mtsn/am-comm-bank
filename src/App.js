@@ -1,7 +1,7 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
-import { createGlobalStyle } from "styled-components";
+import { Switch, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Personal from "./pages/Personal";
@@ -16,7 +16,6 @@ import SiteMap from "./pages/SiteMap";
 import ReportOfCondition from "./pages/ReportOfCondition";
 import OnlineBanking from "./pages/OnlineBanking";
 import Nav from "./components/Nav";
-import Footer from "./components/Footer";
 
 const theme = {
   colors: {
@@ -36,57 +35,67 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     background: ${theme.colors.white};
     font-family: "Open Sans", "Helvetica", "Arial";
+    overflow-x: "hidden",
+    max-width: 100vw;
   }
 `;
+
 function App() {
+  const location = useLocation();
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Router>
-        <Nav navOpen={false} />
-        <Switch>
-          <Route path='/personal'>
-            <Personal />
-          </Route>
-          <Route path='/contact'>
-            <Contact />
-          </Route>
-          <Route path='/checks'>
-            <Checks />
-          </Route>
-          <Route path='/onlineBanking'>
-            <OnlineBanking />
-          </Route>
-          <Route path='/business'>
-            <Business />
-          </Route>
-          <Route path='/loans'>
-            <Loans />
-          </Route>
-          <Route path='/location'>
-            <Location />
-          </Route>
-          <Route path='/services'>
-            <Services />
-          </Route>
-          <Route path='/about'>
-            <About />
-          </Route>
-          <Route path='/privacyPolicy'>
-            <PrivacyPolicy />
-          </Route>
-          <Route path='/siteMap'>
-            <SiteMap />
-          </Route>
-          <Route path='/reportOfCondition'>
-            <ReportOfCondition />
-          </Route>
-          <Route path='/'>
-            <Home />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
+
+      <Nav navOpen={false} />
+      <div
+        style={{
+          position: "relative",
+        }}
+      >
+        <AnimatePresence>
+          <Switch location={location} key={location.pathname}>
+            <Route path='/personal'>
+              <Personal />
+            </Route>
+            <Route path='/contact'>
+              <Contact />
+            </Route>
+            <Route path='/checks'>
+              <Checks />
+            </Route>
+            <Route path='/onlineBanking'>
+              <OnlineBanking />
+            </Route>
+            <Route path='/business'>
+              <Business />
+            </Route>
+            <Route path='/loans'>
+              <Loans />
+            </Route>
+            <Route path='/location'>
+              <Location />
+            </Route>
+            <Route path='/services'>
+              <Services />
+            </Route>
+            <Route path='/about'>
+              <About />
+            </Route>
+            <Route path='/privacyPolicy'>
+              <PrivacyPolicy />
+            </Route>
+            <Route path='/siteMap'>
+              <SiteMap />
+            </Route>
+            <Route path='/reportOfCondition'>
+              <ReportOfCondition />
+            </Route>
+            <Route path='/'>
+              <Home />
+            </Route>
+          </Switch>
+        </AnimatePresence>
+      </div>
     </ThemeProvider>
   );
 }
