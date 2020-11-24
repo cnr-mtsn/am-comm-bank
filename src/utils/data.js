@@ -356,6 +356,12 @@ const home = {
   },
 };
 
+const reportOfCondition = {
+  header: "report of condition",
+  description:
+    "America's Community Bank's Report of Condition is updated quarterly and posted to the bank's lobby. If you would like to obtain a copy, please contact us at 816-228-2300.",
+};
+
 export {
   home,
   checking,
@@ -368,4 +374,5 @@ export {
   cards,
   checks,
   onlineBanking,
+  reportOfCondition,
 };

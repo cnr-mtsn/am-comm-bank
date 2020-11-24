@@ -12,8 +12,9 @@ const Container = styled.footer`
   flex-direction: column;
   justify-content: space-around;
   gap: 1rem;
-  width: 100vw;
-  margin: 0 -2rem 0 -2rem;
+  position: absolute;
+  right: 0;
+  left: 0;
 `;
 const Links = styled.div`
   display: flex;

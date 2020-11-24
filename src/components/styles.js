@@ -18,9 +18,11 @@ const TypeSelector = styled.div`
   }
 `;
 const StyledAccountPageWrapper = styled(motion.div)`
-  min-height: 100vh;
+  min-height: 90vh;
   position: absolute;
-  padding: 2rem 2rem 0rem 2rem;
+  width: 100vw;
+  left: 0;
+  right: 0;
 `;
 const AccountPageWrapper = ({ children }) => (
   <StyledAccountPageWrapper
