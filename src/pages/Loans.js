@@ -7,12 +7,15 @@ import {
   AccountPageWrapper,
   Container,
   CardSection,
+  FullWidthImage,
 } from "../components/styles";
 import piggyBank from "../media/piggyBank.png";
 import online from "../media/online.png";
+import home from "../media/home.jpg";
 export default function Loans(props) {
   return (
     <AccountPageWrapper>
+      <FullWidthImage src={home} alt='Photo by Binyamin Mellish from Pexels' />
       <Container>
         <div>
           <InfoSection type={loans} />

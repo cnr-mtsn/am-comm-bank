@@ -215,6 +215,11 @@ const CardSection = styled.div`
   align-items: center;
 `;
 
+const FullWidthImage = styled.img`
+  width: 100vw;
+  height: auto;
+`;
+
 export {
   TypeSelector,
   AccountPageWrapper,
@@ -228,4 +233,5 @@ export {
   StyledHomeCard,
   StyledButton,
   CardSection,
+  FullWidthImage,
 };

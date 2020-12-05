@@ -10,12 +10,14 @@ import {
   TypeSelector,
   Container,
   CardSection,
+  FullWidthImage,
 } from "../components/styles";
 
 import checks from "../media/checks.png";
 import online from "../media/online.png";
 import piggyBank from "../media/piggyBank.png";
 import locate from "../media/locate.png";
+import personal from "../media/personal-man.jpg";
 
 const PersonalHeader = styled.h1`
   text-transform: uppercase;
@@ -37,6 +39,10 @@ export default function Personal(props) {
 
   return (
     <AccountPageWrapper>
+      <FullWidthImage
+        src={personal}
+        alt='Photo by Karolina Grabowska from Pexels'
+      />
       <TypeSelector>
         <PersonalHeader
           style={{
