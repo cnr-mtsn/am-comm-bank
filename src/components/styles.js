@@ -39,6 +39,7 @@ const AccountPageWrapper = ({ children }) => (
 
 const Container = styled.div`
   display: flex;
+  margin: 0 auto;
   max-width: 90vw;
   padding: 1rem;
 
@@ -124,19 +125,22 @@ const StyledCard = styled(motion.div)`
     padding: 1rem;
     margin: 1rem 0;
     img {
-      height: 8rem;
+      height: 9rem;
       padding: 1rem;
     }
     h3 {
       padding: 0;
       margin: 0;
       text-align: center;
+      font-size: 1.5rem;
       text-transform: uppercase;
       font-weight: lighter;
     }
     p {
       text-align: center;
       font-weight: lighter;
+      width: 85%;
+      margin: 1rem auto;
     }
     a {
       padding: 1rem;
@@ -146,7 +150,8 @@ const StyledCard = styled(motion.div)`
     }
   }
   @media ${device.tablet} {
-    width: 90vw;
+    margin: 1rem auto;
+    width: 80%;
   }
 `;
 const StyledSliderCard = styled(motion.div)`

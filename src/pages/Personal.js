@@ -24,7 +24,11 @@ const PersonalHeader = styled.h1`
   font-size: 1.3rem;
   font-weight: 600;
   margin-top: 2rem;
+  border: none;
+  border-radius: 15px;
+  padding: 1rem;
   cursor: pointer;
+  border: 0.5px solid ${props => props.theme.colors.blue};
 `;
 
 export default function Personal(props) {
@@ -47,10 +51,11 @@ export default function Personal(props) {
         <PersonalHeader
           style={{
             color: type ? "black" : "lightslategrey",
-            fontSize: type ? "1.3rem" : "1rem",
+            fontSize: type ? "1.3rem" : ".9rem",
             lineHeight: type ? "1" : "1.5",
             cursor: "pointer",
             marginRight: "1rem",
+            transition: ".5s ease",
           }}
           onClick={handleCheckingClick}
         >
@@ -60,10 +65,11 @@ export default function Personal(props) {
         <PersonalHeader
           style={{
             color: !type ? "black" : "lightslategrey",
-            fontSize: !type ? "1.3rem" : "1rem",
+            fontSize: !type ? "1.3rem" : ".9rem",
             lineHeight: !type ? "1" : "1.5",
             cursor: "pointer",
             marginLeft: "1rem",
+            transition: ".5s ease",
           }}
           onClick={handleSavingsClick}
         >

@@ -12,11 +12,15 @@ const StyledInfo = styled(motion.div)`
     font-weight: 700;
   }
   p {
-    margin: 0;
-    padding: 0;
+    font-size: 1.1rem;
+  }
+  ul {
+    margin: 1rem 0;
   }
   li {
-    padding: 0.2rem;
+    padding: 0.3rem;
+    list-style: inside;
+    line-height: 15pt;
   }
   .info-section {
     margin-top: 2.5rem;
@@ -49,10 +53,10 @@ export default function InfoSection({ type }) {
         {type.header && <h2>{type.header}</h2>}
 
         {type.description && (
-          <dddp>
+          <p>
             {type.description}{" "}
             {type.link && <a href={type.link.url}>{type.link.text}</a>}
-          </dddp>
+          </p>
         )}
 
         {type.info && (
