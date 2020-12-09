@@ -20,7 +20,6 @@ const TypeSelector = styled.div`
 const StyledAccountPageWrapper = styled(motion.div)`
   min-height: 90vh;
   position: absolute;
-  width: 100vw;
   left: 0;
   right: 0;
 `;
