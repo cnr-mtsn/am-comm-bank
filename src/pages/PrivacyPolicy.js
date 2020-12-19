@@ -6,12 +6,19 @@ const StyledHeader = styled.h1`
   width: 80%;
   margin: 0 auto;
   padding: 3rem 0;
+  font-size: 1.5rem;
 `;
 const StyledTable = styled.table`
   width: 80%;
   margin: 0.5rem auto;
   border: 0.5px solid lightgrey;
   border-collapse: collapse;
+  th {
+    padding: .5rem;
+    font-size: 1rem;
+    color: #333;
+  }
+
   caption {
     text-align: right;
     font-weight: bold;
@@ -26,6 +33,7 @@ const StyledTable = styled.table`
     padding: 1rem;
     text-transform: uppercase;
     margin: 0;
+    width: 20%;
   }
   #privacy-title {
     color: ${props => props.theme.colors.blue};
@@ -47,11 +55,11 @@ const StyledTable = styled.table`
     }
     th {
       text-transform: capitalize;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       border: 1px solid white;
-      padding: 1rem;
       background: #74747b;
       color: ${props => props.theme.colors.white};
+      width: 20%;
     }
   }
   #table-three-head {
@@ -110,21 +118,54 @@ const StyledTable = styled.table`
       color: ${props => props.theme.colors.white};
     }
   }
-  #table-five-head {
-
-      th {
-        background: rgb(116, 116, 123);
-        color: white;
-        text-align: right;
-        padding: 1rem 0;
-        width: 60%;
-        font-size: 1.2rem;
-
+  #table-five-body {
+    th {
+      padding: 1rem;
+      text-align: left;
+    }
+    td {
+      padding: 1rem;
+      color: grey;
+      border: 1px solid lightgrey;
+      font-size: 1rem;
+    }
+  }
+  #table-six-body {
+    th {
+      font-size: 1rem;
+      text-align: left;
+      border: .5px solid lightgrey;
+      color: ${props => props.theme.colors.black};
+    }
+    td {
+      padding: 1rem;
+      border: .5px solid lightgrey;
+      color: grey;
+      ul {
+        margin: 0.5rem 0 0.5rem 2rem;
+        li {
+          margin: 0.2rem 0;
+        }
       }
     }
   }
-  #table-five-body {
-
+  #centered-grey {
+    th {
+      color: ${props => props.theme.colors.white};
+    }
+    background: #74747b;
+    color: ${props => props.theme.colors.white};
+  }
+  #table-seven-body {
+    th {
+      width: 30%;
+      padding: .5rem;
+      text-align: left;
+    }
+    td {
+      padding: .5rem;
+      color: grey;
+    }
   }
 `;
 
@@ -144,7 +185,7 @@ export default function PrivacyPolicy() {
           </tr>
         </thead>
       </StyledTable>
-      <StyledTable className='table-two'>
+      <StyledTable>
         <tbody id='table-two-body'>
           <tr>
             <th>why?</th>
@@ -175,6 +216,15 @@ export default function PrivacyPolicy() {
                 When you are no longer our customer, we continue to share your
                 information as described in this notice.
               </p>
+            </td>
+          </tr>
+          <tr>
+            <th>how?</th>
+            <td>
+              <p>
+                	All financial companies need to share customers’ personal information to run their everyday business. In the section below, we list the reasons financial companies can share their customers’ personal information; the reasons America's Community Bank chooses to share; and whether you can limit this sharing.
+              </p>
+
             </td>
           </tr>
         </tbody>
@@ -265,14 +315,95 @@ export default function PrivacyPolicy() {
         </tbody>
       </StyledTable>
       <StyledTable>
-        <thead id='table-five-head'>
-          <th>Who we are</th>
-          <th></th>
+        <thead id="centered-grey">
+          <tr>
+            <th colspan="2">Who We Are</th>
+          </tr>
+
         </thead>
         <tbody id='table-five-body'>
           <tr>
             <th>Who is providing this notice?</th>
-            <td>America's Community Bank</td>
+            <td>
+                America's Community Bank
+                </td>
+          </tr>
+        </tbody>
+      </StyledTable>
+      <StyledTable>
+        <thead id="centered-grey">
+          <tr>
+            <th colspan="2">What We Do</th>
+          </tr>
+        </thead>
+        <tbody id="table-six-body">
+          <tr>
+            <th>How does America's Community Bank protect my personal information?</th>
+            <td>To protect your personal information from unauthorized access and use, we use security measures that comply with federal law. These measures include computer safeguards and secured files and buildings.</td>
+          </tr>
+          <tr>
+            <th>How does America's Community Bank collect my personal information?</th>
+            <td>
+            <p>We collect your personal information, for example, when you:
+              <ul>
+                <li>Open an account</li>
+                <li>Pay your bill or give us your contact information</li>
+                <li>Provide account information or give us your contact information</li>
+              </ul>
+              We also collect your personal information from others, such as credit bureaus, affiliates, or other companies.
+            </p>
+            </td>
+          </tr>
+          <tr>
+            <th>Why can't I limit all sharing?</th>
+            <td>
+              <p>Federal law gives you the right to limit only:
+                <ul>
+                  <li>Sharing for affiliates’ everyday business purposes—information about your creditworthiness</li>
+                  <li>Affiliates from using your information to market to you</li>
+                  <li>Sharing for non-affiliates' companies to market to you</li>
+                </ul>
+                See below for more on your rights under state law.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>What happens when I limit sharing for an account I hold jointly with someone else? </th>
+            <td>Your choices will apply to everyone on your account.</td>
+          </tr>
+        </tbody>
+      </StyledTable>
+      <StyledTable>
+        <thead id="centered-grey">
+        <tr>
+          <th colspan="2">Definitions</th>
+        </tr>
+        </thead>
+        <tbody id="table-seven-body">
+          <tr>
+            <th>Affiliates</th>
+            <td>Companies related by common ownership or control. They can be financial and non-financial companies. America's Community Bank does not share with affiliates.</td>
+          </tr>
+          <tr>
+            <th>Non-Affiliates</th>
+            <td>Companies not related by common ownership or control. They can be financial and non-financial companies. America's Community Bank does not share with non-affiliates.</td>
+          </tr>
+          <tr>
+            <th>Joint Marketing
+            </th>
+            <td>A formal agreement between non-affiliated financial companies that together market financial products or services to you. America's Community Bank does not jointly market.</td>
+          </tr>
+        </tbody>
+      </StyledTable>
+      <StyledTable>
+        <thead id="centered-grey">
+          <tr>
+            <th>Other Important Information</th>
+          </tr>
+        </thead>
+        <tbody id="table-seven-body">
+          <tr>
+            <td>We do not disclose any nonpublic personal information about our customers or former customers to anyone, except as permitted by law. If you decide to close your account(s) or become an inactive customer, we will adhere to the privacy policies and practices as described on this notice. America’s Community Bank restricts access to nonpublic personal information about you only to bank employees who need to know that information to provide products or services to you. We maintain physical, electronic, and procedural safeguards that comply with federal standards to guard your nonpublic personal information.</td>
           </tr>
         </tbody>
       </StyledTable>

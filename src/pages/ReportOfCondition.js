@@ -6,7 +6,10 @@ import InfoSection from "../components/InfoSection";
 export default function ReportOfCondition() {
   return (
     <AccountPageWrapper>
+      <div style={{height: "70vh"}}>
+
       <InfoSection type={reportOfCondition} />
+      </div>
     </AccountPageWrapper>
   );
 }
