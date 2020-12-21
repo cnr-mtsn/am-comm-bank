@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 import {
   StyledCard,
@@ -33,7 +34,7 @@ export default function SideCard({ card, image, type }) {
       <img src={image} alt={card.header} />
       <h3>{card.header}</h3>
       <p>{card.description}</p>
-      <a href={card.link.url}>{card.link.text}</a>
+      <Link to={card.link.url}>{card.link.text}</Link>
     </StyledHomeCard>
   ) : (
     <StyledCard
