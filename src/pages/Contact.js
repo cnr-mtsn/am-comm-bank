@@ -64,31 +64,6 @@ const Form = styled.form`
 export default function Contact() {
   const [state, setState] = useState({});
 
-  function encode(data) {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  }
-
-  function handleChange(e) {
-    setState({ [e.target.name]: e.target.value });
-    console.log("change");
-  };
-
- function handleSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...state
-      })
-    })
-    .then(() => console.log("submit"))
-      .catch(error => alert(error));
-  };
 	return (
 		<AccountPageWrapper>
 			<Header>Contact Us</Header>
@@ -102,19 +77,20 @@ export default function Contact() {
 			</Paragraph>
 
       <Form
-        name="contact"
-        onSubmit={handleSubmit}
-        netlify
+        name="Contact"
+        method="post"
+        onSubmit="submit"
         data-netlify="true">
-				<label for="firstName">First Name</label>
+        <input type="hidden" name="form-name" value="Contact"/>
+				<label htmlFor="firstName">First Name</label>
 				<input type="text" name="firstName" onChange={handleChange} required />
-				<label for="lastName">Last Name</label>
+				<label htmlFor="lastName">Last Name</label>
 				<input type="text" name="lastName" onChange={handleChange} required />
-				<label for="address">Address</label>
+				<label htmlFor="address">Address</label>
 				<input type="text" name="address" onChange={handleChange} />
-				<label for="city">City</label>
+				<label htmlFor="city">City</label>
 				<input type="text" name="city" onChange={handleChange} />
-				<label for="state">State </label>
+				<label htmlFor="state">State </label>
 				<select name="state" onChange={handleChange}>
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
@@ -168,13 +144,13 @@ export default function Contact() {
 					<option value="WI">Wisconsin</option>
 					<option value="WY">Wyoming</option>
 				</select>
-				<label for="zip">Zip Code</label>
+				<label htmlFor="zip">Zip Code</label>
 				<input type="number" name="zip" onChange={handleChange} />
-				<label for="email">Email Address</label>
+				<label htmlFor="email">Email Address</label>
 				<input type="email" name="email" onChange={handleChange} required />
-				<label for="phone">Phone Number</label>
+				<label htmlFor="phone">Phone Number</label>
 				<input type="tel" name="phone" onChange={handleChange} required />
-				<label for="message">Message</label>
+				<label htmlFor="message">Message</label>
 				<textarea name="message" onChange={handleChange} />
         <button type="submit">Submit</button>
 			</Form>
