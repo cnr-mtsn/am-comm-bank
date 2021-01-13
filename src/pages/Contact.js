@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { AccountPageWrapper } from "../components/styles";
 import styled from "styled-components";
 import { CardSection } from "../components/styles";
@@ -6,8 +6,6 @@ import SideCard from "../components/SideCard";
 import { cards } from "../utils/data";
 import online from "../media/online.png";
 import lend from "../media/lend.png";
-
-
 
 const Header = styled.h2`
 	padding: 2rem 1rem;
@@ -62,8 +60,6 @@ const Form = styled.form`
 `;
 
 export default function Contact() {
-  const [state, setState] = useState({});
-
 	return (
 		<AccountPageWrapper>
 			<Header>Contact Us</Header>
@@ -76,12 +72,8 @@ export default function Contact() {
 				816-228-2300.
 			</Paragraph>
 
-      <Form
-        name="Contact"
-        method="post"
-        onSubmit="submit"
-        data-netlify="true">
-        <input type="hidden" name="form-name" value="Contact"/>
+			<Form name="Contact" method="post" onSubmit="submit" data-netlify="true">
+				<input type="hidden" name="form-name" value="Contact" />
 				<label htmlFor="firstName">First Name</label>
 				<input type="text" name="firstName" required />
 				<label htmlFor="lastName">Last Name</label>
@@ -152,7 +144,7 @@ export default function Contact() {
 				<input type="tel" name="phone" required />
 				<label htmlFor="message">Message</label>
 				<textarea name="message" />
-        <button type="submit">Submit</button>
+				<button type="submit">Submit</button>
 			</Form>
 
 			<div
