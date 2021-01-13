@@ -19,10 +19,50 @@ const TypeSelector = styled.div`
   }
 `;
 const StyledAccountPageWrapper = styled(motion.div)`
-  min-height: 90vh;
-  position: absolute;
-  left: 0;
-  right: 0;
+	min-height: 90vh;
+	position: absolute;
+	left: 0;
+	right: 0;
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 3rem auto;
+		width: 90%;
+		margin: 0 auto;
+		label {
+			font-weight: 300;
+			color: #6d6e71;
+			letter-spacing: 0.8pt;
+		}
+		input,
+		select {
+			margin: 0.2rem 0 1.5rem 0;
+			width: 100%;
+			display: block;
+			width: 100%;
+			height: 2.5rem;
+			padding: 0.375rem 0.75rem;
+			font-size: 1rem;
+			line-height: 1.42857;
+			color: #727070;
+			background-color: #fff;
+			border: 0.0625rem solid #e3e3e3;
+		}
+		textarea {
+			margin: 0.2rem 0 1.5rem 0;
+			width: 100%;
+			display: block;
+			width: 100%;
+			height: 8rem;
+			padding: 0.375rem 0.75rem;
+			font-size: 1rem;
+			line-height: 1.42857;
+			color: #727070;
+			background-color: #fff;
+			border: 0.0625rem solid #e3e3e3;
+		}
+	}
 `;
 const AccountPageWrapper = ({ children }) => (
   <StyledAccountPageWrapper
