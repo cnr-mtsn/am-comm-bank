@@ -105,15 +105,15 @@ export default function Contact() {
         onSubmit={handleSubmit}
         netlify>
 				<label for="firstName">First Name</label>
-				<input type="text" name="firstName" required />
+				<input type="text" name="firstName" onChange={handleChange} required />
 				<label for="lastName">Last Name</label>
-				<input type="text" name="lastName" required />
+				<input type="text" name="lastName" onChange={handleChange} required />
 				<label for="address">Address</label>
-				<input type="text" name="address" />
+				<input type="text" name="address" onChange={handleChange} />
 				<label for="city">City</label>
-				<input type="text" name="city" />
+				<input type="text" name="city" onChange={handleChange} />
 				<label for="state">State </label>
-				<select name="state">
+				<select name="state" onChange={handleChange}>
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
 					<option value="AZ">Arizona</option>
@@ -167,13 +167,13 @@ export default function Contact() {
 					<option value="WY">Wyoming</option>
 				</select>
 				<label for="zip">Zip Code</label>
-				<input type="number" name="zip" />
+				<input type="number" name="zip" onChange={handleChange} />
 				<label for="email">Email Address</label>
-				<input type="email" name="email" required />
+				<input type="email" name="email" onChange={handleChange} required />
 				<label for="phone">Phone Number</label>
-				<input type="tel" name="phone" required />
+				<input type="tel" name="phone" onChange={handleChange} required />
 				<label for="message">Message</label>
-				<textarea name="message" />
+				<textarea name="message" onChange={handleChange} />
         <button type="submit">Submit</button>
 			</Form>
 
