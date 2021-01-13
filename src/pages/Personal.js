@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import InfoSection from "../components/InfoSection";
 import SideCard from "../components/SideCard";
-
-import { cards } from "../utils/data";
-import { checking, savings } from "../utils/data";
+import { cards, checking, savings } from "../utils/data";
 import {
   AccountPageWrapper,
   TypeSelector,
@@ -21,14 +19,13 @@ import personal from "../media/personal-man.jpg";
 
 const PersonalHeader = styled.h1`
   text-transform: uppercase;
-  font-size: 1.3rem;
   font-weight: 600;
   margin-top: 2rem;
   border: none;
   border-radius: 15px;
   padding: 1rem;
   cursor: pointer;
-  border: 0.5px solid ${props => props.theme.colors.blue};
+  border: 1px solid ${props => props.theme.colors.blue};
 `;
 
 export default function Personal(props) {
@@ -50,8 +47,8 @@ export default function Personal(props) {
       <TypeSelector>
         <PersonalHeader
           style={{
-            color: type ? "black" : "lightslategrey",
-            fontSize: type ? "1.3rem" : ".9rem",
+            color: type ? "navy" : "lightslategrey",
+            fontSize: type ? "1.2rem" : ".6rem",
             lineHeight: type ? "1" : "1.5",
             cursor: "pointer",
             marginRight: "1rem",
@@ -64,8 +61,8 @@ export default function Personal(props) {
 
         <PersonalHeader
           style={{
-            color: !type ? "black" : "lightslategrey",
-            fontSize: !type ? "1.3rem" : ".9rem",
+            color: !type ? "navy" : "lightslategrey",
+            fontSize: !type ? "1.2rem" : ".6rem",
             lineHeight: !type ? "1" : "1.5",
             cursor: "pointer",
             marginLeft: "1rem",

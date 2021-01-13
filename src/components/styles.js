@@ -3,6 +3,7 @@ import { device } from "../utils/device";
 import { motion } from "framer-motion";
 import { pageTransition, pageVariants } from "../utils/motion";
 import Footer from "../components/Footer";
+
 const TypeSelector = styled.div`
   display: flex;
 

@@ -12,7 +12,6 @@ import Location from "./pages/Location";
 import Loans from "./pages/Loans";
 import Services from "./pages/Services";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import SiteMap from "./pages/SiteMap";
 import ReportOfCondition from "./pages/ReportOfCondition";
 import OnlineBanking from "./pages/OnlineBanking";
 import Nav from "./components/Nav";
@@ -83,9 +82,6 @@ function App() {
             </Route>
             <Route path='/privacyPolicy'>
               <PrivacyPolicy />
-            </Route>
-            <Route path='/siteMap'>
-              <SiteMap />
             </Route>
             <Route path='/reportOfCondition'>
               <ReportOfCondition />

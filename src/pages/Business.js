@@ -1,6 +1,5 @@
 import React from "react";
 import InfoSection from "../components/InfoSection";
-
 import SideCard from "../components/SideCard";
 import { cards, checking } from "../utils/data";
 import online from "../media/online.png";

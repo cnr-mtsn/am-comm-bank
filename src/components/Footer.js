@@ -74,8 +74,6 @@ export default function Footer() {
       <Links>
         <Link to='/privacyPolicy'>Privacy Policy</Link>
         <p className='divider'> | </p>
-        <Link to='/siteMap'>Site Map</Link>
-        <p className='divider'> | </p>
         <Link to='/reportOfCondition'>Report Of Condition</Link>
       </Links>
 
@@ -83,7 +81,7 @@ export default function Footer() {
         <div className='inner'>
           <a href='https://www.fdic.gov/'>Member FDIC</a>
           <a className='equalHousing' href='https://www.hud.gov/'>
-            Equal Housing Lender
+            Equal Housing Lender{"  "}
             <AiOutlineHome style={{ transform: "translateY(2px)" }} size={16} />
           </a>
         </div>
