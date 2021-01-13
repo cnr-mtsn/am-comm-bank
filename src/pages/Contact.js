@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { AccountPageWrapper } from "../components/styles";
 import styled from "styled-components";
 import { CardSection } from "../components/styles";
@@ -6,6 +6,7 @@ import SideCard from "../components/SideCard";
 import { cards } from "../utils/data";
 import online from "../media/online.png";
 import lend from "../media/lend.png";
+
 
 
 const Header = styled.h2`
@@ -61,6 +62,31 @@ const Form = styled.form`
 `;
 
 export default function Contact() {
+  const [state, setState] = useState({});
+
+  function encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
+
+  const handleChange = e => {
+    setState({ [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...state
+      })
+    })
+      .catch(error => alert(error));
+  };
 	return (
 		<AccountPageWrapper>
 			<Header>Contact Us</Header>
@@ -73,17 +99,21 @@ export default function Contact() {
 				816-228-2300.
 			</Paragraph>
 
-			<Form name="contact" netlify>
+      <Form
+        name="contact"
+        method="post"
+        onSubmit={handleSubmit}
+        netlify>
 				<label for="firstName">First Name</label>
-				<input type="text" name="firstName" required />
+				<input type="text" name="firstName" onChange={handleChange} required />
 				<label for="lastName">Last Name</label>
-				<input type="text" name="lastName" required />
+				<input type="text" name="lastName" onChange={handleChange} required />
 				<label for="address">Address</label>
-				<input type="text" name="address" />
+				<input type="text" name="address" onChange={handleChange} />
 				<label for="city">City</label>
-				<input type="text" name="city" />
+				<input type="text" name="city" onChange={handleChange} />
 				<label for="state">State </label>
-				<select name="state">
+				<select name="state" onChange={handleChange}>
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
 					<option value="AZ">Arizona</option>
@@ -137,13 +167,13 @@ export default function Contact() {
 					<option value="WY">Wyoming</option>
 				</select>
 				<label for="zip">Zip Code</label>
-				<input type="number" name="zip" />
+				<input type="number" name="zip" onChange={handleChange} />
 				<label for="email">Email Address</label>
-				<input type="email" name="email" required />
+				<input type="email" name="email" onChange={handleChange} required />
 				<label for="phone">Phone Number</label>
-				<input type="tel" name="phone" required />
+				<input type="tel" name="phone" onChange={handleChange} required />
 				<label for="message">Message</label>
-				<textarea name="message" />
+				<textarea name="message" onChange={handleChange} />
         <button type="submit">Submit</button>
 			</Form>
 
