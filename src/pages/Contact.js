@@ -73,7 +73,7 @@ export default function Contact() {
 				816-228-2300.
 			</Paragraph>
 
-			<Form action="POST" name="contact" data-netlify="true">
+			<Form name="contact" netlify>
 				<label for="firstName">First Name</label>
 				<input type="text" name="firstName" required />
 				<label for="lastName">Last Name</label>
