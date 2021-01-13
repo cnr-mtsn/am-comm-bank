@@ -7,6 +7,7 @@ import { cards } from "../utils/data";
 import online from "../media/online.png";
 import lend from "../media/lend.png";
 
+
 const Header = styled.h2`
 	padding: 2rem 1rem;
 	font-weight: 500;
@@ -72,7 +73,7 @@ export default function Contact() {
 				816-228-2300.
 			</Paragraph>
 
-			<Form action="/" name="contact" method="POST" data-netlify="true">
+			<Form action="POST" name="contact" data-netlify="true">
 				<label for="firstName">First Name</label>
 				<input type="text" name="firstName" required />
 				<label for="lastName">Last Name</label>
