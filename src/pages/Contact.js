@@ -70,11 +70,12 @@ export default function Contact() {
       .join("&");
   }
 
-  const handleChange = e => {
+  function handleChange(e) {
     setState({ [e.target.name]: e.target.value });
+    console.log("change");
   };
 
-  const handleSubmit = e => {
+ function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
     fetch("/", {
@@ -85,6 +86,7 @@ export default function Contact() {
         ...state
       })
     })
+    .then(() => console.log("submit"))
       .catch(error => alert(error));
   };
 	return (
@@ -101,9 +103,9 @@ export default function Contact() {
 
       <Form
         name="contact"
-        method="post"
         onSubmit={handleSubmit}
-        netlify>
+        netlify
+        data-netlify="true">
 				<label for="firstName">First Name</label>
 				<input type="text" name="firstName" onChange={handleChange} required />
 				<label for="lastName">Last Name</label>
