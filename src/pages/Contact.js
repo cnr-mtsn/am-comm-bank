@@ -83,15 +83,15 @@ export default function Contact() {
         data-netlify="true">
         <input type="hidden" name="form-name" value="Contact"/>
 				<label htmlFor="firstName">First Name</label>
-				<input type="text" name="firstName" onChange={handleChange} required />
+				<input type="text" name="firstName" required />
 				<label htmlFor="lastName">Last Name</label>
-				<input type="text" name="lastName" onChange={handleChange} required />
+				<input type="text" name="lastName" required />
 				<label htmlFor="address">Address</label>
-				<input type="text" name="address" onChange={handleChange} />
+				<input type="text" name="address" />
 				<label htmlFor="city">City</label>
-				<input type="text" name="city" onChange={handleChange} />
+				<input type="text" name="city" />
 				<label htmlFor="state">State </label>
-				<select name="state" onChange={handleChange}>
+				<select name="state">
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
 					<option value="AZ">Arizona</option>
@@ -145,13 +145,13 @@ export default function Contact() {
 					<option value="WY">Wyoming</option>
 				</select>
 				<label htmlFor="zip">Zip Code</label>
-				<input type="number" name="zip" onChange={handleChange} />
+				<input type="number" name="zip" />
 				<label htmlFor="email">Email Address</label>
-				<input type="email" name="email" onChange={handleChange} required />
+				<input type="email" name="email" required />
 				<label htmlFor="phone">Phone Number</label>
-				<input type="tel" name="phone" onChange={handleChange} required />
+				<input type="tel" name="phone" required />
 				<label htmlFor="message">Message</label>
-				<textarea name="message" onChange={handleChange} />
+				<textarea name="message" />
         <button type="submit">Submit</button>
 			</Form>
 
