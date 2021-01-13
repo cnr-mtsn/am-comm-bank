@@ -70,11 +70,11 @@ export default function Contact() {
       .join("&");
   }
 
-  const handleChange = e => {
+  handleChange = e => {
     setState({ [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
+  handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
     fetch("/", {
@@ -105,15 +105,15 @@ export default function Contact() {
         onSubmit={handleSubmit}
         netlify>
 				<label for="firstName">First Name</label>
-				<input type="text" name="firstName" onChange={handleChange} required />
+				<input type="text" name="firstName" required />
 				<label for="lastName">Last Name</label>
-				<input type="text" name="lastName" onChange={handleChange} required />
+				<input type="text" name="lastName" required />
 				<label for="address">Address</label>
-				<input type="text" name="address" onChange={handleChange} />
+				<input type="text" name="address" />
 				<label for="city">City</label>
-				<input type="text" name="city" onChange={handleChange} />
+				<input type="text" name="city" />
 				<label for="state">State </label>
-				<select name="state" onChange={handleChange}>
+				<select name="state">
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
 					<option value="AZ">Arizona</option>
@@ -167,13 +167,13 @@ export default function Contact() {
 					<option value="WY">Wyoming</option>
 				</select>
 				<label for="zip">Zip Code</label>
-				<input type="number" name="zip" onChange={handleChange} />
+				<input type="number" name="zip" />
 				<label for="email">Email Address</label>
-				<input type="email" name="email" onChange={handleChange} required />
+				<input type="email" name="email" required />
 				<label for="phone">Phone Number</label>
-				<input type="tel" name="phone" onChange={handleChange} required />
+				<input type="tel" name="phone" required />
 				<label for="message">Message</label>
-				<textarea name="message" onChange={handleChange} />
+				<textarea name="message" />
         <button type="submit">Submit</button>
 			</Form>
 
