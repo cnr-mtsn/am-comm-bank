@@ -35,14 +35,14 @@ const Container = styled.div`
 export default function Contact() {
 	const [success, setSuccess] = useState(false);
 
-  useEffect(() => {
-    if (window.location.search.includes("success=true")) {
+	useEffect(() => {
+		if (window.location.search.includes("success=true")) {
 			setSuccess(true);
 		}
-    return () => {
-      console.log("Message status: ", success);
-    };
-  }, [success]);
+		return () => {
+			console.log("Message status: ", success);
+		};
+	}, [success]);
 
 	return (
 		<AccountPageWrapper>
@@ -61,7 +61,12 @@ export default function Contact() {
 						at 816-228-2300.
 					</Paragraph>
 
-					<form name="Contact" method="POST" action="/contact/?success=true" data-netlify="true">
+					<form
+						name="Contact"
+						method="POST"
+						action="/contact/?success=true"
+						data-netlify="true"
+						data-netlify-recaptcha="true">
 						<input type="hidden" name="form-name" value="Contact" />
 						<label htmlFor="firstName">First Name</label>
 						<input type="text" name="firstName" id="firstName" required />
@@ -133,7 +138,7 @@ export default function Contact() {
 						<input type="tel" name="phone" id="phone" required />
 						<label htmlFor="message">Message</label>
 						<textarea name="message" id="message" />
-
+						<div data-netlify-recaptcha="true" />
 						<button type="submit">Submit</button>
 					</form>
 				</div>
