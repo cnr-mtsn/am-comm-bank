@@ -41,6 +41,9 @@ const StyledAccountPageWrapper = styled(motion.div)`
 			line-height: 1.42857;
 			border-radius: 1rem;
 		}
+		p {
+			color: #1a936f;
+		}
 		label {
 			font-weight: 300;
 			color: #6d6e71;
