@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { device } from "../utils/device";
 import { motion } from "framer-motion";
 import { home } from "../utils/data";
-import welcome from "../media/hero-welcome.jpg";
+import welcome from "../media/hero-welcome.jpg?nf_resize=fit";
 import loans from "../media/hero-loans.jpg";
 import personal from "../media/hero-personal.jpg";
 import Accordion from "../components/Accordion";
