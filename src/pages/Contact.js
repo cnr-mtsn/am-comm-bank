@@ -138,7 +138,6 @@ export default function Contact() {
 						<input type="tel" name="phone" id="phone" required />
 						<label htmlFor="message">Message</label>
 						<textarea name="message" id="message" />
-						<div data-netlify-recaptcha="true" />
 						<button type="submit">Submit</button>
 					</form>
 				</div>
