@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { AccountPageWrapper } from "../components/styles";
 import styled from "styled-components";
 import { CardSection } from "../components/styles";
@@ -18,21 +18,32 @@ const Paragraph = styled.p`
 	padding: 0.5rem 1rem;
 	color: grey;
 	line-height: 16pt;
-  width: 85%;
-  @media ${device.tablet} {
-    width: 90%;
-  }
+	width: 85%;
+	@media ${device.tablet} {
+		width: 90%;
+	}
 `;
 const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  border: 1px solid black;
-  @media ${device.tablet} {
-    flex-direction: column;
-  }
+	display: flex;
+	flex-direction: row;
+	border: 1px solid black;
+	@media ${device.tablet} {
+		flex-direction: column;
+	}
 `;
 
 export default function Contact() {
+	const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (window.location.search.includes("success=true")) {
+			setSuccess(true);
+		}
+    return () => {
+      console.log("Message status: ", success);
+    };
+  }, [success]);
+
 	return (
 		<AccountPageWrapper>
 			<Container>
@@ -47,7 +58,7 @@ export default function Contact() {
 						at 816-228-2300.
 					</Paragraph>
 
-					<form name="Contact" method="post" data-netlify="true" onSubmit="submit">
+					<form name="Contact" method="POST" action="/contact/?success=true" data-netlify="true">
 						<input type="hidden" name="form-name" value="Contact" />
 						<label htmlFor="firstName">First Name</label>
 						<input type="text" name="firstName" id="firstName" required />
