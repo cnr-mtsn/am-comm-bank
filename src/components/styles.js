@@ -27,9 +27,20 @@ const StyledAccountPageWrapper = styled(motion.div)`
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		margin: 3rem auto;
-		width: 90%;
-		margin: 0 auto;
+		padding: 3rem 1rem;
+		button {
+			color: #fff;
+			background-color: #020864;
+			border-color: #020864;
+			font-weight: 400;
+			text-decoration: none;
+			text-transform: uppercase;
+			border: 0.0625rem solid #295da8;
+			padding: 0.6875rem 2rem;
+			font-size: 0.875rem;
+			line-height: 1.42857;
+			border-radius: 1rem;
+		}
 		label {
 			font-weight: 300;
 			color: #6d6e71;
