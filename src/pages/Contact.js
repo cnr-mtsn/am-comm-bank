@@ -47,7 +47,7 @@ export default function Contact() {
 						at 816-228-2300.
 					</Paragraph>
 
-					<form name="Contact" method="post" netlify data-netlify="true" onSubmit="submit">
+					<form name="Contact" method="post" data-netlify="true" onSubmit="submit">
 						<input type="hidden" name="form-name" value="Contact" />
 						<label htmlFor="firstName">First Name</label>
 						<input type="text" name="firstName" id="firstName" required />
