@@ -279,6 +279,12 @@ const FullWidthImage = styled.img`
   height: auto;
 `;
 
+const Header = styled.h2`
+	padding: 2rem 1rem;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+`;
+
 export {
   TypeSelector,
   AccountPageWrapper,
@@ -293,4 +299,5 @@ export {
   StyledButton,
   CardSection,
   FullWidthImage,
+  Header
 };

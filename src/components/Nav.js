@@ -133,6 +133,9 @@ const Menu = ({ open, setOpen }) => {
       <Link to='/about'>
         <p>About Us</p>
       </Link>
+      <Link to='/location'>
+        <p>Location</p>
+      </Link>
     </StyledMenu>
   );
 };

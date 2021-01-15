@@ -1,19 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { AccountPageWrapper } from "../components/styles";
 import styled from "styled-components";
-import { CardSection } from "../components/styles";
+import { CardSection, Header } from "../components/styles";
 import SideCard from "../components/SideCard";
 import { cards } from "../utils/data";
 import online from "../media/online.png";
 import lend from "../media/lend.png";
 import { device } from "../utils/device";
 
-const Header = styled.h2`
-	padding: 2rem 1rem;
-	font-weight: 500;
-	text-transform: uppercase;
-	font-size: 1.3rem;
-`;
+
 const Paragraph = styled.p`
 	padding: 0.5rem 1rem;
 	color: grey;
@@ -26,7 +21,8 @@ const Paragraph = styled.p`
 const Container = styled.div`
 	display: flex;
 	flex-direction: row;
-	border: 1px solid black;
+  border: 1px solid black;
+  padding: 2rem;
 	@media ${device.tablet} {
 		flex-direction: column;
 	}
