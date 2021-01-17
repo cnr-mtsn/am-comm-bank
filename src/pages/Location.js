@@ -13,10 +13,11 @@ const Container = styled.div`
 	div {
 		h4 {
 			margin: 0.5rem 0 0 0;
+			font-weight: 500;
 		}
 		h3 {
 			color: ${props => props.theme.colors.lightBlue};
-			font-weight: 500;
+			font-weight: 600;
 			font-family: sans-serif;
 			text-transform: uppercase;
 		}
@@ -46,9 +47,6 @@ export default function Location(props) {
 	return (
 		<AccountPageWrapper>
 			<Container>
-        <sectio>
-
-        </sectio>
 				<h2>{location.header}</h2>
 				<div className="blue-springs-office">
 					<h3>Blue Springs Office</h3>
@@ -58,14 +56,14 @@ export default function Location(props) {
 				</div>
 				<div>
 					<h3>Lobby Hours</h3>
-					<h4>Monday-Friday</h4>
+					<h4>Mon-Fri</h4>
 					<p>{location.hours.lobby.weekday}</p>
 					<h4>Saturday</h4>
 					<p>{location.hours.lobby.saturday}</p>
 				</div>
 				<div>
 					<h3>Drive Up Hours</h3>
-					<h4>Monday-Friday</h4>
+					<h4>Mon-Fri</h4>
 					<p>{location.hours.driveUp.weekday}</p>
 					<h4>Saturday</h4>
 					<p>{location.hours.driveUp.saturday}</p>

@@ -7,12 +7,13 @@ const StyledInfo = styled(motion.div)`
   h2 {
     color: ${props => props.theme.colors.blue};
     text-transform: uppercase;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 600;
   }
   p {
     font-size: 1.1rem;
+    line-height: 20pt;
   }
   ul {
     margin: 1rem 0;
@@ -20,7 +21,7 @@ const StyledInfo = styled(motion.div)`
   li {
     padding: 0.3rem;
     list-style: inside;
-    line-height: 15pt;
+    line-height: 20pt;
   }
   .info-section {
     margin-top: 2.5rem;
