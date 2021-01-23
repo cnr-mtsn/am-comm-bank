@@ -130,6 +130,10 @@ const StyledButton = styled.button`
   color: ${props => props.theme.colors.white};
   font-size: 1rem;
   text-transform: uppercase;
+  a {
+  color: ${props => props.theme.colors.white};
+  text-decoration: none;
+  }
 `;
 
 //links, search icon, login button, menu icon

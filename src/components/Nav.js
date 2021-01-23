@@ -153,23 +153,27 @@ export default function Nav({ navOpen }) {
   const [open, setOpen] = useState(navOpen);
 
   return (
-    <StyledNav>
-      <Logo />
+		<StyledNav>
+			<Logo />
 
-      <NavItems>
-        <NavLinks />
+			<NavItems>
+				<NavLinks />
 
-        <SearchIcon>
-          <IoMdSearch color='white' size={32} />
-        </SearchIcon>
+				<SearchIcon>
+					<IoMdSearch color="white" size={32} />
+				</SearchIcon>
 
-        <StyledButton className='loginButton'>Login</StyledButton>
+				<StyledButton className="loginButton">
+					<a href="https://www.netteller.com/login2008/Authentication/Views/Login.aspx?returnUrl=%2famcommbank">
+						Login
+					</a>
+				</StyledButton>
 
-        <MenuIcon>
-          <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} setOpen={setOpen} />
-        </MenuIcon>
-      </NavItems>
-    </StyledNav>
-  );
+				<MenuIcon>
+					<Burger open={open} setOpen={setOpen} />
+					<Menu open={open} setOpen={setOpen} />
+				</MenuIcon>
+			</NavItems>
+		</StyledNav>
+	);
 }
