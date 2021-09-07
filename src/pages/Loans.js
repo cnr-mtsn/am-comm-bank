@@ -9,10 +9,13 @@ import {
   CardSection,
   FullWidthImage,
 } from "../components/styles";
-import piggyBank from "../media/piggyBank.png";
-import online from "../media/online.png";
-import home from "../media/home.jpg";
+
+
 export default function Loans(props) {
+	const online = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/online_fnpash.png";
+	const piggyBank =
+			"https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/piggyBank_grlhma.png";
+	const home = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038479/AmComm%20Bank/home_tkpk3d.jpg";
   return (
     <AccountPageWrapper>
       <FullWidthImage src={home} alt='Photo by Binyamin Mellish from Pexels' />

@@ -8,11 +8,15 @@ import {
   CardSection,
   FullWidthImage
 } from "../components/styles";
-import locate from "../media/locate.png";
-import piggyBank from "../media/piggyBank.png";
-import onlineBankingImage from '../media/online_banking.jpg';
+
+
 
 export default function OnlineBanking() {
+	const piggyBank =
+			"https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/piggyBank_grlhma.png";
+	const locate = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/locate_sdnjxf.png";
+	const onlineBankingImage =
+		"https://res.cloudinary.com/cnrmtsn/image/upload/v1631038465/AmComm%20Bank/online_banking_j0juqj.jpg";
   return (
     <AccountPageWrapper>
       <FullWidthImage src={onlineBankingImage} alt="Photo by Anete Lusina from Pexels"/>

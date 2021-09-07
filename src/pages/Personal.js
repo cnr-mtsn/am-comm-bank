@@ -11,11 +11,6 @@ import {
   FullWidthImage,
 } from "../components/styles";
 
-import checks from "../media/checks.png";
-import online from "../media/online.png";
-import piggyBank from "../media/piggyBank.png";
-import locate from "../media/locate.png";
-import personal from "../media/personal-man.jpg";
 
 const PersonalHeader = styled.h1`
   text-transform: uppercase;
@@ -38,6 +33,12 @@ export default function Personal(props) {
     setType(false);
   };
 
+	const personal =
+		"https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/personal-man_qvceg7.jpg";
+	const checks = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038466/AmComm%20Bank/checks_nz3der.png";
+	const online = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/online_fnpash.png";
+	const piggyBank = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/piggyBank_grlhma.png";
+	const locate = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/locate_sdnjxf.png";
   return (
     <AccountPageWrapper>
       <FullWidthImage

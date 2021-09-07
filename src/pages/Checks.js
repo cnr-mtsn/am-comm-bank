@@ -8,9 +8,11 @@ import InfoSection from "../components/InfoSection";
 
 import SideCard from "../components/SideCard";
 import { checks, cards } from "../utils/data";
-import online from "../media/online.png";
-import piggyBank from "../media/piggyBank.png";
+
 export default function Checks() {
+	const online = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/online_fnpash.png";
+	const piggyBank =
+			"https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/piggyBank_grlhma.png";
   return (
     <AccountPageWrapper>
       <Container>

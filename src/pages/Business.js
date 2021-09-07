@@ -2,9 +2,6 @@ import React from "react";
 import InfoSection from "../components/InfoSection";
 import SideCard from "../components/SideCard";
 import { cards, checking } from "../utils/data";
-import online from "../media/online.png";
-import contact from "../media/contact.png";
-import business from "../media/business.jpg";
 import {
   AccountPageWrapper,
   Container,
@@ -13,6 +10,11 @@ import {
 } from "../components/styles";
 
 export default function Business(props) {
+
+	const business =
+		"https://res.cloudinary.com/cnrmtsn/image/upload/v1631038479/AmComm%20Bank/business_u2f3hn.jpg";
+		const online = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/online_fnpash.png";
+		const contact = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038465/AmComm%20Bank/contact_u5fjae.png";
   return (
     <AccountPageWrapper>
       <FullWidthImage src={business} alt='Photo by fauxels from Pexels' />

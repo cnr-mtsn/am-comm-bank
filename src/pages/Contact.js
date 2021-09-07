@@ -4,8 +4,7 @@ import styled from "styled-components";
 import { CardSection, Header } from "../components/styles";
 import SideCard from "../components/SideCard";
 import { cards } from "../utils/data";
-import online from "../media/online.png";
-import lend from "../media/lend.png";
+
 import { device } from "../utils/device";
 
 
@@ -40,6 +39,8 @@ export default function Contact() {
 		};
 	}, [success]);
 
+	 	const online = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/online_fnpash.png";
+		const lend = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/lend_z3rg5h.png";
 	return (
 		<AccountPageWrapper>
 			<Container>

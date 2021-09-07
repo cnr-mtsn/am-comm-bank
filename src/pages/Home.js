@@ -3,9 +3,7 @@ import styled from "styled-components";
 import { device } from "../utils/device";
 import { motion } from "framer-motion";
 import { home } from "../utils/data";
-import welcome from "../media/hero-welcome.jpg?nf_resize=fit";
-import loans from "../media/hero-loans.jpg";
-import personal from "../media/hero-personal.jpg";
+
 import Accordion from "../components/Accordion";
 import HomeCards from "../components/HomeCards";
 import { homePageVariants } from "../utils/motion";
@@ -46,6 +44,11 @@ const StyledImage = styled(motion.img)`
 `;
 
 export default function Home() {
+	const loans = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038466/AmComm%20Bank/hero-loans_ocpycp.jpg";
+	const personal =
+		"https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/personal-man_qvceg7.jpg";
+		const welcome =
+			"https://res.cloudinary.com/cnrmtsn/image/upload/v1631038466/AmComm%20Bank/hero-welcome_v886if.jpg";
   const [image, setImage] = useState(welcome);
 
   const toggle1 = () => setImage(welcome);

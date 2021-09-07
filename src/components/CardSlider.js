@@ -3,12 +3,12 @@ import { CarouselProvider, Slider, Slide } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
 import { cards } from "../utils/data";
-import checks from "../media/checks.png";
-import online from "../media/online.png";
-import contact from "../media/contact.png";
 import SideCard from "../components/SideCard";
 
 export default function CardSlider() {
+	const checks = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038466/AmComm%20Bank/checks_nz3der.png";
+	const online = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038464/AmComm%20Bank/online_fnpash.png";
+	const contact = "https://res.cloudinary.com/cnrmtsn/image/upload/v1631038465/AmComm%20Bank/contact_u5fjae.png";
   return (
     <CarouselProvider
       naturalSlideHeight={300}
